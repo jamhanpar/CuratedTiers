@@ -1,0 +1,44 @@
+{
+  "name": "mern",
+  "version": "1.0.0",
+  "description": "--- ## Background and overview - CuratedTiers is a minimal viable product that helps users shop for gaming-related products on Amazon. We offer a better user experience by removing clutter, removing sponsored products, and most importantly by sorting the products in 3 tiers of prices (hence the name!). This mimics buying behavior especially for electronic products, where I want to filter not just by ratings and reviews but also on price range (low, medium or high-end).",
+  "main": "curated_tier.js",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "concurrently": "^5.3.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "jwt-decode": "^3.1.2",
+    "mongoose": "^5.11.14",
+    "nodemon": "^2.0.7",
+    "passport": "^0.4.1",
+    "passport-jwt": "^4.0.0",
+    "react-redux": "^7.2.2",
+    "react-router-dom": "^5.2.0",
+    "redux": "^4.0.5",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.3.0",
+    "validator": "^13.5.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node curated_tier.js",
+    "server": "nodemon curated_tier.js",
+    "frontend-install": "npm install --prefix frontend",
+    "frontend": "npm start --prefix frontend",
+    "dev": "concurrently \"npm run server\" \"npm run frontend\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prefix frontend"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jamhanpar/curatedtiers.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jamhanpar/curatedtiers/issues"
+  },
+  "homepage": "https://github.com/jamhanpar/curatedtiers#readme"
+}
