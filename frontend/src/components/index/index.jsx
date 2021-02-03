@@ -2,17 +2,11 @@ import React from "react";
 import { withRouter } from "react-router";
 
 import './index.css'
-// import PdtIndexItem from "./pdt_index_item";
+import PdtIndexItem from "./pdt_index_item";
 
 class IndexPage extends React.Component {
   constructor(props) {
     super(props);
-
-    // this.state = {
-    //   searchTerm: "",
-    // }
-
-    //local storage ? 
 
   }
 
