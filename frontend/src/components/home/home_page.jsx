@@ -1,6 +1,7 @@
 import React from "react";
 import '../stylesheets/content.css';
 import '../stylesheets/reset.css';
+import Search from "../search/search";
 
 class HomePage extends React.Component {
   render() {
@@ -13,6 +14,9 @@ class HomePage extends React.Component {
                 <li>Most popular</li>
             </ul>
         </div>
+
+        <Search/>
+
         <div className="product-list-container">
           <div className="product-card">
               <div className="product-card-price-container">
