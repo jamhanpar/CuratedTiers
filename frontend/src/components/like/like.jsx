@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 class Like extends React.Component {
   constructor(props) {
@@ -8,21 +8,20 @@ class Like extends React.Component {
     // this.handleClick = this.handleClick.bind(this);
   }
 
-
-
-
   render() {
-    const likedStatus = this.state.liked === false ? "unliked" : "liked"
-    const handleClick = likedStatus === "unliked" ? (
-      () => this.props.createLikedProduct(this.props.product))
-
-
+    const likedStatus = this.state.liked === false ? "unliked" : "liked";
+    const handleClick =
+      likedStatus === "unliked"
+        ? () => this.props.createLikedProduct(this.props.product)
+        : () => this.props.deleteLikedProduct(this.props.product.id);
 
     return (
       <div>
-        <button className={likedStatus} onClick={this.handleClick}>Heart</button>
+        <button className={likedStatus} onClick={handleClick}>
+          Heart
+        </button>
       </div>
-    )
+    );
   }
 }
 
