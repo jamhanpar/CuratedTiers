@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./navbar.css";
 import "../../stylesheets/reset.css";
+import { FaSearch } from "react-icons/fa";
 
 class NavBar extends React.Component {
   constructor(props) {
@@ -26,8 +27,8 @@ class NavBar extends React.Component {
     } else {
       return (
         <div className="user-auth-container">
-            <Link to={"/login"}><button className="login-btn">Log in</button></Link>
-            <Link to={"/signup"}><button className="join-btn">Signup</button></Link>
+            <Link to={"/login"} style={{ textDecoration: 'none' }}><button className="login-btn">Log in</button></Link>
+            <Link to={"/signup"} style={{ textDecoration: 'none' }}><button className="join-btn">Signup</button></Link>
         </div>
       );
     }
@@ -38,9 +39,9 @@ class NavBar extends React.Component {
         <header className="main-nav">
             <div className="main-nav-container">
               <ul className="main-nav-list">
-                  <Link to={"/"}><li className="main-nav-item">Home</li></Link>
-                  <li className="main-nav-item"><Link to={"/sales"}>Sales</Link></li>
-                  <li className="main-nav-item"><Link to={"/featured"}>Featured</Link></li>
+                  <li className="main-nav-item"><Link to={"/"} style={{ textDecoration: 'none' }}>Home</Link></li>
+                  <li className="main-nav-item"><Link to={"/sales"} style={{ textDecoration: 'none' }}>Sales</Link></li>
+                  <li className="main-nav-item"><Link to={"/featured"} style={{ textDecoration: 'none' }}>Featured</Link></li>
               </ul>
             </div>
             <div className="logo-container">
@@ -48,7 +49,8 @@ class NavBar extends React.Component {
             </div>
             <div className="search-container">
                 <div className="search-bar-container">
-                    <img className="nav-search-icon" src={require('../../../img/search-icon.png')} alt="search-icon"/>
+                    <div className="nav-search-icon"><FaSearch /></div>
+                    {/* <img className="nav-search-icon" src={require('../../../img/search-icon.png')} alt="search-icon"/> */}
                     <input className="search-bar" type="text" placeholder="Search"/>
                 </div>
             </div>
