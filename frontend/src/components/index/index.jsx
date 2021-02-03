@@ -1,6 +1,8 @@
 import React from "react";
 import { withRouter } from "react-router";
 
+import './index.css'
+
 class IndexPage extends React.Component {
   constructor(props) {
     super(props);
@@ -95,7 +97,25 @@ class IndexPage extends React.Component {
   // debugger
       return (
         <div className="index-page">
-        index page placeholder text
+          <div className='low-tier'>
+            <span>Low Tier</span>
+            {
+              lowTier.map( (pdt, i) => {
+                <li key={`pdt-${i}`}> {pdt[10]} </li>
+              })
+            }
+          </div>
+          
+          <div className='mid-tier'>
+            <span>Mid Tier</span>
+
+          </div>
+          
+          <div className='high-tier'>
+            <span>High Tier</span>
+
+          </div>
+    
         </div>
       )
       
