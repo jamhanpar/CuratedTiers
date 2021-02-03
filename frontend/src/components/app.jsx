@@ -10,6 +10,7 @@ import FeaturedPageContainer from "./featured/featured_container";
 import UserProfileContainer from "./user_profile/user_profile_container";
 import Modal from "./modal/modal";
 import IndexPageContainer from "./index/index_container"
+import './app.css';
 
 const App = () => (
   <div className="app-container">

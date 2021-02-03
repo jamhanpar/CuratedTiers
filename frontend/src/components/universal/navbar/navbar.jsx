@@ -52,19 +52,17 @@ class NavBar extends React.Component {
   render() {
     return (
         <header className="main-nav">
+          <div className="main-nav-components-container">
             <div className="main-nav-container">
               <ul className="main-nav-list">
-                  <li>
-                    <div className="nav-icon"><FaHome /></div>
-                    <Link to={"/"} className="main-nav-item">HOME</Link>
+                  <li className="main-nav-item">
+                    <Link to={"/"} className="link-item"><FaHome className="nav-icon" />Home</Link>
                   </li>
-                  <li>
-                    <div className="nav-icon"><FaTag /></div>
-                    <Link to={"/sales"} className="main-nav-item">SALES</Link>
+                  <li className="main-nav-item">
+                    <Link to={"/sales"} className="link-item"><FaTag className="nav-icon" />Sales</Link>
                   </li>
-                  <li>
-                    <div className="nav-icon"><FaStar /></div>
-                    <Link to={"/featured"} className="main-nav-item">FEATURED</Link>
+                  <li className="main-nav-item">
+                    <Link to={"/featured"} className="link-item"><FaStar className="nav-icon" />Featured</Link>
                   </li>
               </ul>
             </div>
@@ -73,12 +71,13 @@ class NavBar extends React.Component {
             </div>
             <div className="search-container">
                 <div className="search-bar-container">
-                    <div className="nav-icon"><FaSearch /></div>
+                    <div className="nav-search-icon"><FaSearch /></div>
                     {/* <img className="nav-search-icon" src={require('../../../img/search-icon.png')} alt="search-icon"/> */}
                     <input className="search-bar" type="text" placeholder="Search"/>
                 </div>
             </div>
             {this.getSessionLinks()}
+          </div>
         </header>
     );
   }
