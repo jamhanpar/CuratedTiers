@@ -39,9 +39,9 @@ class NavBar extends React.Component {
         <header className="main-nav">
             <div className="main-nav-container">
               <ul className="main-nav-list">
-                  <li className="main-nav-item"><Link to={"/"} style={{ textDecoration: 'none' }}>Home</Link></li>
-                  <li className="main-nav-item"><Link to={"/sales"} style={{ textDecoration: 'none' }}>Sales</Link></li>
-                  <li className="main-nav-item"><Link to={"/featured"} style={{ textDecoration: 'none' }}>Featured</Link></li>
+                  <li><Link to={"/"} className="main-nav-item">Home</Link></li>
+                  <li><Link to={"/sales"} className="main-nav-item">Sales</Link></li>
+                  <li><Link to={"/featured"} className="main-nav-item">Featured</Link></li>
               </ul>
             </div>
             <div className="logo-container">

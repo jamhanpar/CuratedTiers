@@ -52,11 +52,9 @@
 }
 
 .main-nav-item {
-    font-style: sans-serif;
-}
-
-.main-nav-item:visited {
     color: black;
+    font-style: sans-serif;
+    text-decoration: none;
 }
 
 .main-nav-container>ul>li {
