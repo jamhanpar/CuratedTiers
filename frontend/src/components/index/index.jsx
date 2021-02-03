@@ -35,8 +35,8 @@ class IndexPage extends React.Component {
     if (this.props.products.length === undefined) {
      
       return (
-        <div>
-          <img src={ShoppingLoadIcon} alt="Loading..."/>
+        <div className="loading-gif">
+          <img src={ShoppingLoadIcon} alt="Loading..." className="shopping-gif"/>
         </div>
       )
     } else {
