@@ -8,7 +8,7 @@ class IndexItem extends React.Component {
     render(){
         return (
             <div>
-
+                not a useless constructor
             </div>
         )
     }
