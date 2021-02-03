@@ -1,12 +1,12 @@
 import Keys from '../../config/keys';
-var axios = require("axios").default;
+const axios = require("axios").default;
 
-var options = {
+const options = {
   method: 'GET',
   url: 'https://amazon-product-reviews-keywords.p.rapidapi.com/product/search',
   params: {keyword: 'placeholder', page: '1', country: 'US', category: 'aps'},
   headers: {
-    'x-rapidapi-key': `${Keys.rapidAPIKey}`,
+    'x-rapidapi-key': Keys.rapidAPIKey,
     'x-rapidapi-host': 'amazon-product-reviews-keywords.p.rapidapi.com'
   }
 };
