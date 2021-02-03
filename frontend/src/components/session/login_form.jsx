@@ -50,7 +50,7 @@ class LoginForm extends React.Component {
     return (
       <ul className={`auth-errors ${errorStatus}`}>
         {Object.values(this.props.errors).map((error, i) => (
-          <li key={`error-${i}`}>{error}</li>
+          <li className="error-item" key={`error-${i}`}>{error}</li>
         ))}
       </ul>
     );
@@ -92,6 +92,7 @@ class LoginForm extends React.Component {
             <div className="forgot-password-container">
                 <a className="forgot-password-link" href="#">Forgot your username or password?</a>
             </div>
+
             {this.props.errors.length ? "" : this.renderErrors()}
 
             <button className="login-submit-btn" type="submit">Sign In</button>
