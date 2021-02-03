@@ -1,7 +1,7 @@
 import React from 'react';
 import { closeModal } from '../../actions/modal_actions';
 import { connect } from 'react-redux';
-import IndexItem from '../index_item/index_item';
+import PdtIndexItem from '../index/pdt_index_item';
 import LogInContainer from '../session/login_form_container';
 import SignUpContainer from '../session/signup_form_container';
 
@@ -16,7 +16,7 @@ function Modal({modal, closeModal}) {
   let height;
   switch (modal) {
     case "index_item":
-      component = <IndexItem />;
+      component = <PdtIndexItem />;
       width = `1220px`;
       height = `1000px`;
       break;

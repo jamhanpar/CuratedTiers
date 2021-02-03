@@ -8,13 +8,6 @@ import ShoppingLoadIcon from "../../img/Shopping-1.5s-200px.gif"
 class IndexPage extends React.Component {
   constructor(props) {
     super(props);
-
-    // this.state = {
-    //   searchTerm: "",
-    // }
-
-    //local storage ? 
-
   }
 
   componentWillUnmount() {
@@ -42,22 +35,22 @@ class IndexPage extends React.Component {
     } else {
    
       const products = this.props.products;
-      const { searchTerm } = this.props.location;
+      // const { searchTerm } = this.props.location;
   
       const numItems = products.length;
       // const priceArr = products.map( (product) => product.price.current_price)
       const priceArr = products.map((product) => [
-        product.asin,
-        product.price.current_price,
-        parseInt(product.score),
-        product.price.before_price,
-        product.price.savings_amount,
-        product.price.savings_percent,
-        product.reviews.total_reviews,
-        product.reviews.rating,
-        product.thumbnail,
-        product.title,
-        product.url,
+        product.asin, // 0
+        product.price.current_price, // 1
+        parseInt(product.score), // 2
+        product.price.before_price, // 3 
+        product.price.savings_amount, // 4
+        product.price.savings_percent, // 5
+        product.reviews.total_reviews, // 6
+        product.reviews.rating, // 7
+        product.thumbnail, // 8
+        product.title, // 9 
+        product.url, // 10 
       ]);
    
       // const mean = priceArr.reduce((a,b) => a+b) / numItems
@@ -108,57 +101,44 @@ class IndexPage extends React.Component {
   ;
 
 
+      const lowTierList = lowTier.map( (pdt, i) => {
+            return (
+              //  debugger;
+               <PdtIndexItem key={`${i}`} pdt={pdt} tier='low-tier'/>
+            )
+      })
+      const midTierList = midTier.map( (pdt, i) => {
+            return (
+              //  debugger;
+               <PdtIndexItem key={`${i}`} pdt={pdt} tier='mid-tier'/>
+            )
+      })
+      const highTierList = highTier.map( (pdt, i) => {
+            return (
+              //  debugger;
+               <PdtIndexItem key={`${i}`} pdt={pdt} tier='high-tier'/>
+            )
+      })
 
-   
+  // debugger
       return (
         <div className="index-page">
+
           <div className="low-tier">
             <span>Value</span>
-            <ul>
-              {lowTier.map((pdt, i) => {
-                ;
-                return <li key={`pdt-${i}`}> Title: {pdt[9]} <br/> Price: {pdt[1]} <br/> Score: {pdt[2]} <img src={pdt[8]} alt=""/></li>;
-
-                // return
-                // <PdtIndexItem
-                //   key={i}
-                //   pdt={pdt}
-                // />;
-              })}
-            </ul>
+            <ul>{lowTierList}</ul>
           </div>
 
           <div className="mid-tier">
             <span>Mid Tier</span>
-            <ul>
-              {midTier.map((pdt, i) => {
-                ;
-                return <li key={`pdt-${i}`}> Title: {pdt[9]} <br/> Price: {pdt[1]} <br/> Score: {pdt[2]} <img src={pdt[8]} alt=""/></li>;
-
-                // return
-                // <PdtIndexItem
-                //   key={i}
-                //   pdt={pdt}
-                // />;
-              })}
-            </ul>
+            <ul>{midTierList}</ul>
           </div>
 
           <div className="high-tier">
             <span>High End</span>
-            <ul>
-              {highTier.map((pdt, i) => {
-                ;
-                return <li key={`pdt-${i}`}> Title: {pdt[9]} <br/> Price: {pdt[1]} <br/> Score: {pdt[2]} <img src={pdt[8]} alt=""/></li>;
-
-                // return
-                // <PdtIndexItem
-                //   key={i}
-                //   pdt={pdt}
-                // />;
-              })}
-            </ul>
+            <ul>{highTierList}</ul>
           </div>
+
         </div>
       );
       
