@@ -99,26 +99,51 @@ class IndexPage extends React.Component {
       return (
         <div className="index-page">
           <div className="low-tier">
-            <span>Low Tier</span>
+            <span>Value</span>
             <ul>
               {lowTier.map((pdt, i) => {
-                debugger 
-                // return <li key={`pdt-${i}`}> {pdt[9]} </li>;
-                // return 
-                <PdtIndexItem
-                  key={i}
-                  pdt={pdt}
-                />;
+                debugger;
+                return <li key={`pdt-${i}`}> Title: {pdt[9]} <br/> Price: {pdt[1]} <br/> Score: {pdt[2]} <img src={pdt[8]} alt=""/></li>;
+
+                // return
+                // <PdtIndexItem
+                //   key={i}
+                //   pdt={pdt}
+                // />;
               })}
             </ul>
           </div>
 
           <div className="mid-tier">
             <span>Mid Tier</span>
+            <ul>
+              {midTier.map((pdt, i) => {
+                debugger;
+                return <li key={`pdt-${i}`}> Title: {pdt[9]} <br/> Price: {pdt[1]} <br/> Score: {pdt[2]} <img src={pdt[8]} alt=""/></li>;
+
+                // return
+                // <PdtIndexItem
+                //   key={i}
+                //   pdt={pdt}
+                // />;
+              })}
+            </ul>
           </div>
 
           <div className="high-tier">
-            <span>High Tier</span>
+            <span>High End</span>
+            <ul>
+              {highTier.map((pdt, i) => {
+                debugger;
+                return <li key={`pdt-${i}`}> Title: {pdt[9]} <br/> Price: {pdt[1]} <br/> Score: {pdt[2]} <img src={pdt[8]} alt=""/></li>;
+
+                // return
+                // <PdtIndexItem
+                //   key={i}
+                //   pdt={pdt}
+                // />;
+              })}
+            </ul>
           </div>
         </div>
       );
