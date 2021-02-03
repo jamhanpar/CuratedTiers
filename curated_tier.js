@@ -13,9 +13,7 @@ mongoose
   .then(() => console.log("Connected to MongoDB successfully"))
   .catch(err => console.log(err));
 
-
-
-// app.get("/", (req, res) => res.send("Hello mern project!!"));
+app.get("/", (req, res) => res.send("Hello mern project!!"));
 
 app.use(passport.initialize());
 require('./config/passport')(passport);

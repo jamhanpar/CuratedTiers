@@ -1,5 +1,6 @@
 import React from "react";
 import { withRouter } from "react-router-dom";
+import "./login_form.css";
 
 class LoginForm extends React.Component {
   constructor(props) {
@@ -54,26 +55,43 @@ class LoginForm extends React.Component {
 
   render() {
     return (
-      <div>
-        <form onSubmit={this.handleSubmit}>
-          <div>
-            <input
-              type="text"
-              value={this.state.email}
-              onChange={this.update("email")}
-              placeholder="Email"
-            />
-            <br />
-            <input
-              type="password"
-              value={this.state.password}
-              onChange={this.update("password")}
-              placeholder="Password"
-            />
-            <br />
-            <input type="submit" value="Submit" />
+      <div class="login-form-container">
+        <form class="login-form" onSubmit={this.handleSubmit}>
+            <header>
+                <p class="welcome">Welcome to Curated Tiers</p>
+            </header>
+            <div class="username-label">
+                <label for="username">Email</label>
+            </div>
+            <div class="username-input-container">
+                <input
+                  class="username"
+                  type="text"
+                  value={this.state.email}
+                  onChange={this.update("email")}
+                  placeholder="Email"
+                />
+            </div>
+
+            <div class="username-label">
+                <label for="password">Password</label>
+            </div>
+            <div class="password-input-container">
+                <input
+                  class="password"
+                  type="password"
+                  value={this.state.password}
+                  onChange={this.update("password")}
+                  placeholder="Password"
+                />
+            </div>
+
+            <div class="forgot-password-container">
+                <a class="forgot-password-link" href="#">Forgot your username or password?</a>
+            </div>
             {this.props.errors.length ? "" : this.renderErrors()}
-          </div>
+
+            <button class="login-submit-btn" type="submit">Sign In</button>
         </form>
       </div>
     );

@@ -37,7 +37,7 @@ class NavBar extends React.Component {
         <header className="main-nav-container">
             <ul>
                 <li className="home-btn"><Link to={"/"}>Home</Link></li>
-                <li>Shop</li>
+                <li>Sale</li>
                 <li>Featured</li>
             </ul>
             <div className="logo-container">
