@@ -1,19 +1,14 @@
 import React from "react";
 
-class PdtIndexItem extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
-  render() {
-    debugger
-    return ( 
-    // <div>
-        <li>
-          {this.props.pdt[9]}
-        </li>
-    // </div>
-  )}
+const PdtIndexItem = (props) => {
+  return (
+      <li>
+        Title: {props.pdt[9]} <br />
+        Price: {props.pdt[1]} <br />
+        Score: {props.pdt[2]} <br />
+        <img src={props.pdt[8]} alt="" />
+      </li>
+    )
 }
 
 export default PdtIndexItem;

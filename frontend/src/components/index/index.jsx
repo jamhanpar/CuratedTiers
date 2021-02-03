@@ -1,9 +1,8 @@
 import React from "react";
 import { withRouter } from "react-router";
-import PdtIndexItem from "./pdt_index_item";
-import './index.css'
-import ShoppingLoadIcon from "../../img/Shopping-1.5s-200px.gif"
 
+import './index.css'
+// import PdtIndexItem from "./pdt_index_item";
 
 class IndexPage extends React.Component {
   constructor(props) {
@@ -35,9 +34,7 @@ class IndexPage extends React.Component {
     if (this.props.products.length === undefined) {
      
       return (
-        <div className="loading-gif">
-          <img src={ShoppingLoadIcon} alt="Loading..." className="shopping-gif"/>
-        </div>
+        <div>Loading...</div>
       )
     } else {
    
@@ -108,56 +105,41 @@ class IndexPage extends React.Component {
   ;
 
 
+      const lowTierList = lowTier.map( (pdt, i) => {
+            return (
+              //  debugger;
+               <PdtIndexItem key={`${i}`} pdt={pdt} />
+            )
+      })
+      const midTierList = midTier.map( (pdt, i) => {
+            return (
+              //  debugger;
+               <PdtIndexItem key={`${i}`} pdt={pdt} />
+            )
+      })
+      const highTierList = highTier.map( (pdt, i) => {
+            return (
+              //  debugger;
+               <PdtIndexItem key={`${i}`} pdt={pdt} />
+            )
+      })
 
-   
+  debugger
       return (
         <div className="index-page">
           <div className="low-tier">
             <span>Value</span>
-            <ul>
-              {lowTier.map((pdt, i) => {
-                ;
-                return <li key={`pdt-${i}`}> Title: {pdt[9]} <br/> Price: {pdt[1]} <br/> Score: {pdt[2]} <img src={pdt[8]} alt=""/></li>;
-
-                // return
-                // <PdtIndexItem
-                //   key={i}
-                //   pdt={pdt}
-                // />;
-              })}
-            </ul>
+            <ul>{lowTierList}</ul>
           </div>
 
           <div className="mid-tier">
             <span>Mid Tier</span>
-            <ul>
-              {midTier.map((pdt, i) => {
-                ;
-                return <li key={`pdt-${i}`}> Title: {pdt[9]} <br/> Price: {pdt[1]} <br/> Score: {pdt[2]} <img src={pdt[8]} alt=""/></li>;
-
-                // return
-                // <PdtIndexItem
-                //   key={i}
-                //   pdt={pdt}
-                // />;
-              })}
-            </ul>
+            <ul>{midTierList}</ul>
           </div>
 
           <div className="high-tier">
             <span>High End</span>
-            <ul>
-              {highTier.map((pdt, i) => {
-                ;
-                return <li key={`pdt-${i}`}> Title: {pdt[9]} <br/> Price: {pdt[1]} <br/> Score: {pdt[2]} <img src={pdt[8]} alt=""/></li>;
-
-                // return
-                // <PdtIndexItem
-                //   key={i}
-                //   pdt={pdt}
-                // />;
-              })}
-            </ul>
+            <ul>{highTierList}</ul>
           </div>
         </div>
       );
