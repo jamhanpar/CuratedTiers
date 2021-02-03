@@ -1,5 +1,5 @@
 import React from "react";
-import LikedContainer from '../like/like_container'
+import LikedContainer from '../universal/like/like_container'
 
 
 const PdtIndexItem = (props) => {

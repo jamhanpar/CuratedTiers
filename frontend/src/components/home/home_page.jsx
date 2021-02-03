@@ -1,7 +1,7 @@
 import React from "react";
 import '../stylesheets/content.css';
 import '../stylesheets/reset.css';
-import Search from "../search/search";
+import Search from "../universal/search/search_container";
 
 class HomePage extends React.Component {
   render() {
