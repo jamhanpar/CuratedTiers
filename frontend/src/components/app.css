@@ -2,3 +2,7 @@ html,
 body {
     font-family: 'Montserrat', sans-serif;
 }
+
+button:focus, input:focus, textarea:focus {
+    outline: none;
+}

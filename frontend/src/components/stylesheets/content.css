@@ -60,6 +60,7 @@
 .product-card-price:hover {
     width : 110px;
     height : 100%;
+    cursor: pointer;
     transition: ease 0.5s;
 }
 
