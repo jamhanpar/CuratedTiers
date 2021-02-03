@@ -99,7 +99,7 @@ class SignupForm extends React.Component {
             />
             <br />
             <div className="password-label">
-                <label htmlFor="password">Repeat Password</label>
+                <label htmlFor="password">Confirm Password</label>
             </div>
             <input
               className="password"

@@ -131,6 +131,10 @@
     color: #5c5c5c;
 }
 
+.login-btn:focus {
+    outline: none;
+}
+
 .join-btn {
     border: none;
     border-radius: 15px;
