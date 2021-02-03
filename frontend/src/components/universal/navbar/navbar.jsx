@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./navbar.css";
 import "../../stylesheets/reset.css";
-import { FaSearch } from "react-icons/fa";
+import { FaHome, FaTag, FaStar, FaSearch } from "react-icons/fa";
 
 class NavBar extends React.Component {
   constructor(props) {
@@ -54,9 +54,18 @@ class NavBar extends React.Component {
         <header className="main-nav">
             <div className="main-nav-container">
               <ul className="main-nav-list">
-                  <li><Link to={"/"} className="main-nav-item">Home</Link></li>
-                  <li><Link to={"/sales"} className="main-nav-item">Sales</Link></li>
-                  <li><Link to={"/featured"} className="main-nav-item">Featured</Link></li>
+                  <li>
+                    <div className="nav-icon"><FaHome /></div>
+                    <Link to={"/"} className="main-nav-item">HOME</Link>
+                  </li>
+                  <li>
+                    <div className="nav-icon"><FaTag /></div>
+                    <Link to={"/sales"} className="main-nav-item">SALES</Link>
+                  </li>
+                  <li>
+                    <div className="nav-icon"><FaStar /></div>
+                    <Link to={"/featured"} className="main-nav-item">FEATURED</Link>
+                  </li>
               </ul>
             </div>
             <div className="logo-container">
@@ -64,7 +73,7 @@ class NavBar extends React.Component {
             </div>
             <div className="search-container">
                 <div className="search-bar-container">
-                    <div className="nav-search-icon"><FaSearch /></div>
+                    <div className="nav-icon"><FaSearch /></div>
                     {/* <img className="nav-search-icon" src={require('../../../img/search-icon.png')} alt="search-icon"/> */}
                     <input className="search-bar" type="text" placeholder="Search"/>
                 </div>

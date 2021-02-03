@@ -105,10 +105,8 @@
     align-items    : center;
 }
 
-.nav-search-icon {
-    width  : auto;
-    height : 13px;
-    padding: 2px 5px;
+.nav-icon {
+    padding-right: 10px;
 }
 
 .search-bar {
