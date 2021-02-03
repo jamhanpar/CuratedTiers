@@ -1,0 +1,147 @@
+.app-container {
+    background-color: #F3F3F3;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-nav-container {
+    border-bottom: 1px solid white;
+    box-shadow: 0px 1px 10px 0px rgba(0,0,0,0.2);
+    background: white;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 68px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-nav-container > ul {
+    width: 33%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.main-nav-container > ul > li:first-child {
+    width: 33%;
+    height: 100%;
+    font-size: 20px;
+    color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.main-nav-container > ul > li {
+    width: 33%;
+    height: 100%;
+    font-size: 20px;
+    color: #afafaf;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-nav-container > ul > li:hover {
+    color: #5c5c5c;
+}
+
+.logo-container {
+    width: 33%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-logo {
+    width: auto;
+    height: 33px;
+}
+
+.search-container {
+    width: 21%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.search-bar-container {
+    border-radius: 15px;
+    background: #F3F3F3;
+    width: 212px;
+    height: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-search-icon {
+    width: auto;
+    height: 13px;
+    padding: 0px 5px;
+}
+
+.search-bar {
+    border: none;
+    background: #F3F3F3;
+    font-size: 13px;
+}
+
+.search-bar::placeholder {
+    color: #afafaf;
+}
+
+.search-bar:focus {
+    outline: none;
+    font-size: 13px;
+}
+
+.user-auth-container {
+    width: 13%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+}
+
+.login-btn {
+    border: none;
+    background: none;
+    width: 65px;
+    height: 30px;
+    font-size: 14px;
+    color: #afafaf;
+    text-decoration: none;
+}
+
+.login-btn:hover {
+    color: #5c5c5c;
+}
+
+.join-btn {
+    border: none;
+    border-radius: 15px;
+    background: #22DEBE;
+    width: 70px;
+    height: 30px;
+    font-size: 14px;
+    color: white;
+}
+
+.join-btn:hover {
+    background: #1aaf96;
+    transition: ease 1s;
+}

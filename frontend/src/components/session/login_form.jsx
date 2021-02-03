@@ -1,5 +1,6 @@
 import React from "react";
 import { withRouter } from "react-router-dom";
+import "./session_form.css";
 
 class LoginForm extends React.Component {
   constructor(props) {
@@ -54,26 +55,43 @@ class LoginForm extends React.Component {
 
   render() {
     return (
-      <div>
-        <form onSubmit={this.handleSubmit}>
-          <div>
-            <input
-              type="text"
-              value={this.state.email}
-              onChange={this.update("email")}
-              placeholder="Email"
-            />
-            <br />
-            <input
-              type="password"
-              value={this.state.password}
-              onChange={this.update("password")}
-              placeholder="Password"
-            />
-            <br />
-            <input type="submit" value="Submit" />
+      <div className="login-form-container">
+        <form className="login-form" onSubmit={this.handleSubmit}>
+            <header>
+                <p className="welcome">Welcome to Curated Tiers</p>
+            </header>
+            <div className="username-label">
+                <label htmlFor="username">Email</label>
+            </div>
+            <div className="username-input-container">
+                <input
+                  className="username"
+                  type="text"
+                  value={this.state.email}
+                  onChange={this.update("email")}
+                  placeholder="Email"
+                />
+            </div>
+
+            <div className="username-label">
+                <label htmlFor="password">Password</label>
+            </div>
+            <div className="password-input-container">
+                <input
+                  className="password"
+                  type="password"
+                  value={this.state.password}
+                  onChange={this.update("password")}
+                  placeholder="Password"
+                />
+            </div>
+
+            <div className="forgot-password-container">
+                <a className="forgot-password-link" href="#">Forgot your username or password?</a>
+            </div>
             {this.props.errors.length ? "" : this.renderErrors()}
-          </div>
+
+            <button className="login-submit-btn" type="submit">Sign In</button>
         </form>
       </div>
     );

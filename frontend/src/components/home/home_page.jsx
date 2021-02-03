@@ -1,5 +1,6 @@
 import React from "react";
-
+import '../stylesheets/content.css';
+import '../stylesheets/reset.css';
 
 class HomePage extends React.Component {
   render() {
