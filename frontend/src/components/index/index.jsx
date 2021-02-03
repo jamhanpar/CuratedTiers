@@ -1,8 +1,9 @@
 import React from "react";
 import { withRouter } from "react-router";
-
+import PdtIndexItem from "./pdt_index_item";
 import './index.css'
-// import PdtIndexItem from "./pdt_index_item";
+import ShoppingLoadIcon from "../../img/Shopping-1.5s-200px.gif"
+
 
 class IndexPage extends React.Component {
   constructor(props) {
@@ -34,7 +35,9 @@ class IndexPage extends React.Component {
     if (this.props.products.length === undefined) {
      
       return (
-        <div>Loading...</div>
+        <div className="loading-gif">
+          <img src={ShoppingLoadIcon} alt="Loading..." className="shopping-gif"/>
+        </div>
       )
     } else {
    
@@ -92,17 +95,17 @@ class IndexPage extends React.Component {
         return b[2] - a[2];
       });
 
-  
+  ;
       midTier.sort(function (a, b) {
         return b[2] - a[2];
       });
 
-  
+  ;
       highTier.sort(function (a, b) {
         return b[2] - a[2];
       });
 
-  
+  ;
 
 
 
@@ -113,7 +116,7 @@ class IndexPage extends React.Component {
             <span>Value</span>
             <ul>
               {lowTier.map((pdt, i) => {
-                
+                ;
                 return <li key={`pdt-${i}`}> Title: {pdt[9]} <br/> Price: {pdt[1]} <br/> Score: {pdt[2]} <img src={pdt[8]} alt=""/></li>;
 
                 // return
@@ -129,7 +132,7 @@ class IndexPage extends React.Component {
             <span>Mid Tier</span>
             <ul>
               {midTier.map((pdt, i) => {
-                
+                ;
                 return <li key={`pdt-${i}`}> Title: {pdt[9]} <br/> Price: {pdt[1]} <br/> Score: {pdt[2]} <img src={pdt[8]} alt=""/></li>;
 
                 // return
@@ -145,7 +148,7 @@ class IndexPage extends React.Component {
             <span>High End</span>
             <ul>
               {highTier.map((pdt, i) => {
-                
+                ;
                 return <li key={`pdt-${i}`}> Title: {pdt[9]} <br/> Price: {pdt[1]} <br/> Score: {pdt[2]} <img src={pdt[8]} alt=""/></li>;
 
                 // return

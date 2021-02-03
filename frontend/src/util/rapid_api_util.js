@@ -1,13 +1,13 @@
-var axios = require("axios").default;
+import Keys from "../../../config/keys";
 
-const API_KEY = process.env.REACT_APP_RAPID_API_KEY
+var axios = require("axios").default;
 
 var options = {
   method: 'GET',
   url: 'https://amazon-product-reviews-keywords.p.rapidapi.com/product/search',
   params: {keyword: 'placeholder', page: '1', country: 'US', category: 'aps'},
   headers: {
-    'x-rapidapi-key': `${API_KEY}`,
+    'x-rapidapi-key': `${Keys.rapidAPIKey}`,
     'x-rapidapi-host': 'amazon-product-reviews-keywords.p.rapidapi.com'
   }
 };

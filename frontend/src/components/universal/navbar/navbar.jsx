@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./navbar.css";
 import "../../stylesheets/reset.css";
-import { FaSearch } from "react-icons/fa";
+import { FaHome, FaTag, FaStar, FaSearch } from "react-icons/fa";
 
 class NavBar extends React.Component {
   constructor(props) {
@@ -52,11 +52,18 @@ class NavBar extends React.Component {
   render() {
     return (
         <header className="main-nav">
+          <div className="main-nav-components-container">
             <div className="main-nav-container">
               <ul className="main-nav-list">
-                  <li><Link to={"/"} className="main-nav-item">Home</Link></li>
-                  <li><Link to={"/sales"} className="main-nav-item">Sales</Link></li>
-                  <li><Link to={"/featured"} className="main-nav-item">Featured</Link></li>
+                  <li className="main-nav-item">
+                    <Link to={"/"} className="link-item"><FaHome className="nav-icon" />Home</Link>
+                  </li>
+                  <li className="main-nav-item">
+                    <Link to={"/sales"} className="link-item"><FaTag className="nav-icon" />Sales</Link>
+                  </li>
+                  <li className="main-nav-item">
+                    <Link to={"/featured"} className="link-item"><FaStar className="nav-icon" />Featured</Link>
+                  </li>
               </ul>
             </div>
             <div className="logo-container">
@@ -70,6 +77,7 @@ class NavBar extends React.Component {
                 </div>
             </div>
             {this.getSessionLinks()}
+          </div>
         </header>
     );
   }
