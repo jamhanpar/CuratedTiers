@@ -27,8 +27,23 @@ class NavBar extends React.Component {
     } else {
       return (
         <div className="user-auth-container">
-            <Link to={"/login"} style={{ textDecoration: 'none' }}><button className="login-btn">Log in</button></Link>
-            <Link to={"/signup"} style={{ textDecoration: 'none' }}><button className="join-btn">Signup</button></Link>
+          <button
+            className="login-btn"
+            onClick={() => this.props.openModal(`login`)}
+          >
+            Log in
+          </button>
+
+          {/* <Link to={"/signup"} style={{ textDecoration: "none" }}>
+            <button className="join-btn">Signup</button>
+          </Link> */}
+
+          <button
+            className="join-btn"
+            onClick={() => this.props.openModal(`signup`)}
+          >
+            Signup
+          </button>
         </div>
       );
     }
