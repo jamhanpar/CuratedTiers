@@ -1,6 +1,6 @@
 import React from "react";
-import { AuthRoute } from "../util/route_util";
-import { Switch } from "react-router-dom";
+import { AuthRoute, ProtectedRoute } from "../util/route_util";
+import { Switch, Route } from "react-router-dom";
 import NavBarContainer from "./universal/navbar/navbar_container";
 import { Route } from 'react-router-dom';
 import HomePage from "./home/home_page";
@@ -10,6 +10,7 @@ import SalesPageContainer from "./sale/sales_container";
 import FeaturedPageContainer from "./featured/featured_container";
 import UserProfileContainer from "./user_profile/user_profile_container";
 import Modal from "./modal/modal";
+import IndexPageContainer from "./index/index_container"
 
 const App = () => (
   <div className="app-container">
@@ -22,6 +23,9 @@ const App = () => (
       <AuthRoute exact path="/user/:user_id" component={UserProfileContainer} />
       <AuthRoute exact path="/login" component={LoginFormContainer} />
       <AuthRoute exact path="/signup" component={SignupFormContainer} />
+
+      <Route path="/index" component={IndexPageContainer} />
+
     </Switch>
   </div>
 );

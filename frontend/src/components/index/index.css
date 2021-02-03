@@ -1,0 +1,13 @@
+.index-page {
+  display: flex;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.low-tier, .mid-tier, .high-tier {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+span {
+  font-size: 22px;
+  font-weight: bold;
+}
