@@ -1,4 +1,4 @@
-const Keys = require('../../../config/keys');
+const Keys = require('../../../config/keys').rapidAPIKey;
 var axios = require("axios").default;
 
 var options = {
@@ -6,7 +6,7 @@ var options = {
   url: 'https://amazon-product-reviews-keywords.p.rapidapi.com/product/search',
   params: {keyword: 'placeholder', page: '1', country: 'US', category: 'aps'},
   headers: {
-    'x-rapidapi-key': process.env.RAPID_API_KEY,
+    'x-rapidapi-key': `${Keys}`,
     'x-rapidapi-host': 'amazon-product-reviews-keywords.p.rapidapi.com'
   }
 };
