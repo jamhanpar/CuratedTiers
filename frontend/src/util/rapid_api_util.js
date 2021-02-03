@@ -1,5 +1,4 @@
-import Keys from "../../../config/keys";
-
+const Keys = require('../../../config/keys');
 var axios = require("axios").default;
 
 var options = {
