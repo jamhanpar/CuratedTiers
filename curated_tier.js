@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express();
 const db = require('./config/keys').mongoURI;
+const rapKey = require('./config/keys').rapidAPIKey
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const passport = require('passport');
@@ -15,7 +16,7 @@ mongoose
 
 
 
-app.get("/", (req, res) => res.send("Hello mern project!!"));
+app.get("/", (req, res) => res.send(rapKey));
 
 app.use(passport.initialize());
 require('./config/passport')(passport);
