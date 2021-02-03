@@ -42,7 +42,7 @@ class NavBar extends React.Component {
             className="join-btn"
             onClick={() => this.props.openModal(`signup`)}
           >
-            Log in
+            Signup
           </button>
         </div>
       );
