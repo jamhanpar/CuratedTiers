@@ -8,13 +8,24 @@ class IndexPage extends React.Component {
   constructor(props) {
     super(props);
 
-    // this.handleSubmit = this.handleSubmit.bind(this);
-    // this.navigateToSearch = this.navigateToSearch.bind(this);
+    // this.state = {
+    //   searchTerm: "",
+    // }
+
+    //local storage ? 
+
+  }
+
+  componentWillUnmount() {
+    this.props.resetProducts();
   }
 
   componentDidMount() {
-// debugger
-    const { searchTerm } = this.props.location;
+debugger
+    // const { searchTerm } = this.props.location;
+
+    const searchTerm = localStorage.searchTerm;
+debugger 
     this.props.fetchProducts(searchTerm);
   }
 

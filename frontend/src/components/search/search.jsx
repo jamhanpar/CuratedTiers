@@ -26,6 +26,9 @@ class Search extends React.Component {
       pathname: "/index",
       searchTerm: this.state.searchTerm,
     });
+// debugger
+    localStorage.setItem("searchTerm", this.state.searchTerm)
+// debugger;
   }
 
   render() {
