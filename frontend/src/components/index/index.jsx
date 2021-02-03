@@ -7,7 +7,6 @@ import PdtIndexItem from "./pdt_index_item";
 class IndexPage extends React.Component {
   constructor(props) {
     super(props);
-
   }
 
   componentWillUnmount() {
@@ -33,7 +32,7 @@ class IndexPage extends React.Component {
     } else {
    
       const products = this.props.products;
-      const { searchTerm } = this.props.location;
+      // const { searchTerm } = this.props.location;
   
       const numItems = products.length;
       // const priceArr = products.map( (product) => product.price.current_price)
