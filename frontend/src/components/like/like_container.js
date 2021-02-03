@@ -1,14 +1,17 @@
 import { connect } from 'react-redux';
 import { withRouter} from 'react-router-dom';
 import Like from './like';
-import { createLikedProduct } from '../../actions/like_actions';
+import { createLikedProduct, deleteLikedProduct } from '../../actions/like_actions';
 
 const msp = (state, ownProps) => ({
-  liked: false
+  product: ownProps.product
 });
 
+//product should be a prop passed to like_container from index item or show modal
+
 const mdp = dispatch => ({
-  createLikedProduct: (data) => dispatch(createLikedProduct(data))
+  createLikedProduct: (data) => dispatch(createLikedProduct(data)),
+  deleteLikedProduct: (id) => dispatch(deleteLikedProduct(id))
 });
 
 export default withRouter(connect(msp, mdp)(Like));

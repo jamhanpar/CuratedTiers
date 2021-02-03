@@ -12,8 +12,8 @@ function Modal({modal, closeModal}) {
     return null;
   }
   let component;
-  let width = `460px`
-  let height = `460px`
+  let width;
+  let height;
   switch (modal) {
     case "index_item":
       component = <IndexItem />;
@@ -22,6 +22,8 @@ function Modal({modal, closeModal}) {
       break;
     case "login":
       component = <LogInContainer />;
+      width = 'fit-content';
+      height = 'fit-content';
       break;
     case "signup":
       component = <SignUpContainer />;

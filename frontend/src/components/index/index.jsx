@@ -2,7 +2,7 @@ import React from "react";
 import { withRouter } from "react-router";
 
 import './index.css'
-import PdtIndexItem from "./pdt_index_item";
+// import PdtIndexItem from "./pdt_index_item";
 
 class IndexPage extends React.Component {
   constructor(props) {
@@ -21,20 +21,26 @@ class IndexPage extends React.Component {
   }
 
   componentDidMount() {
+
     // const { searchTerm } = this.props.location;
 
     const searchTerm = localStorage.searchTerm;
+ 
     this.props.fetchProducts(searchTerm);
   }
 
   render() {
+    
     if (this.props.products.length === undefined) {
+     
       return (
         <div>Loading...</div>
       )
     } else {
+   
       const products = this.props.products;
       const { searchTerm } = this.props.location;
+  
       const numItems = products.length;
       // const priceArr = products.map( (product) => product.price.current_price)
       const priceArr = products.map((product) => [
@@ -50,6 +56,7 @@ class IndexPage extends React.Component {
         product.title,
         product.url,
       ]);
+   
       // const mean = priceArr.reduce((a,b) => a+b) / numItems
       // const sd = Math.sqrt(
       //   priceArr.map((x) => Math.pow(x - mean, 2)).reduce((a, b) => a + b) / numItems
@@ -67,36 +74,46 @@ class IndexPage extends React.Component {
 
       priceArr.forEach ( (pdt) => {
         if (count < numTier) {
+    
           lowTier.push(pdt)
         } else if (count >= numTier && count < (numTier * 2)) {
+    
           midTier.push(pdt)
         } else {
+    
           highTier.push(pdt)
         }
         count += 1; 
+    
       })
+  
        
       lowTier.sort(function (a, b) {
         return b[2] - a[2];
       });
 
+  
       midTier.sort(function (a, b) {
         return b[2] - a[2];
       });
 
+  
       highTier.sort(function (a, b) {
         return b[2] - a[2];
       });
 
+  
 
 
 
+   
       return (
         <div className="index-page">
           <div className="low-tier">
             <span>Value</span>
             <ul>
               {lowTier.map((pdt, i) => {
+                
                 return <li key={`pdt-${i}`}> Title: {pdt[9]} <br/> Price: {pdt[1]} <br/> Score: {pdt[2]} <img src={pdt[8]} alt=""/></li>;
 
                 // return
@@ -112,6 +129,7 @@ class IndexPage extends React.Component {
             <span>Mid Tier</span>
             <ul>
               {midTier.map((pdt, i) => {
+                
                 return <li key={`pdt-${i}`}> Title: {pdt[9]} <br/> Price: {pdt[1]} <br/> Score: {pdt[2]} <img src={pdt[8]} alt=""/></li>;
 
                 // return
@@ -127,6 +145,7 @@ class IndexPage extends React.Component {
             <span>High End</span>
             <ul>
               {highTier.map((pdt, i) => {
+                
                 return <li key={`pdt-${i}`}> Title: {pdt[9]} <br/> Price: {pdt[1]} <br/> Score: {pdt[2]} <img src={pdt[8]} alt=""/></li>;
 
                 // return
