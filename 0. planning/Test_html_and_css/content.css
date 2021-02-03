@@ -68,6 +68,10 @@
     align-items: center;
 }
 
+.product-card-price:hover {
+    cursor: pointer;
+}
+
 .product-card-img-container {
     display: flex;
     justify-content: center;
