@@ -21,7 +21,7 @@ class Search extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-debugger
+// debugger
     this.props.history.push({
       pathname: "/index",
       searchTerm: this.state.searchTerm,
