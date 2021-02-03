@@ -32,11 +32,12 @@ class LoginForm extends React.Component {
       password: this.state.password,
     };
 
-    this.props.login(user)
-    this.props.closeModal();
-    if (this.props.isAuthenticated) {
-      this.props.history.push("/")
-    }
+    this.props.login(user).then(() => {
+      if (this.props.isAuthenticated) {
+        this.props.closeModal();
+        this.props.history.push("/")
+      }
+    })
   }
 
   componentWillUnmount() {
@@ -45,8 +46,9 @@ class LoginForm extends React.Component {
 
   // Render the session errors if there are any
   renderErrors() {
+    const errorStatus = Object.values(this.props.errors).length > 0 ? "" : "hide-errors"
     return (
-      <ul>
+      <ul className={`auth-errors ${errorStatus}`}>
         {Object.values(this.props.errors).map((error, i) => (
           <li key={`error-${i}`}>{error}</li>
         ))}
@@ -61,12 +63,12 @@ class LoginForm extends React.Component {
             <header>
                 <p className="welcome">Welcome to Curated Tiers</p>
             </header>
-            <div className="username-label">
-                <label htmlFor="username">Email</label>
+            <div className="email-label">
+                <label htmlFor="email">Email</label>
             </div>
-            <div className="username-input-container">
+            <div className="email-input-container">
                 <input
-                  className="username"
+                  className="email"
                   type="text"
                   value={this.state.email}
                   onChange={this.update("email")}
@@ -74,7 +76,7 @@ class LoginForm extends React.Component {
                 />
             </div>
 
-            <div className="username-label">
+            <div className="password-label">
                 <label htmlFor="password">Password</label>
             </div>
             <div className="password-input-container">

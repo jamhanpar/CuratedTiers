@@ -1,19 +1,22 @@
-.login-form-container {
+.login-form-container,
+.signup-form-container {
     /* border: 1px solid black; */
+    border-radius: 5px;
     background-color: white;
-    width          : 100%;
-    height         : 100%;
+    width          : fit-content;
+    height         : fit-content;
     font-family    : sans-serif;
     display        : flex;
     align-items    : center;
     justify-content: center;
 }
 
-.login-form {
+.login-form,
+.signup-form {
     /* border       : 1px solid black; */
     border-radius: 4px;
-    width        : 400px;
-    height       : 400px;
+    width        : fit-content;
+    height       : fit-content;
     top          : 50%;
     bottom       : 50%;
     padding      : 30px;
@@ -24,8 +27,9 @@
     margin-bottom: 15px;
 }
 
-.username-label,
-.password-label {
+.email-label,
+.password-label,
+.username-label {
     /* border: 1px solid lightgrey; */
     width         : 100%;
     padding-top   : 12px;
@@ -35,9 +39,10 @@
 }
 
 .username,
-.password {
+.password,
+.email {
     border       : 1px solid lightgrey;
-    width        : 93.5%;
+    width        : 370px;
     height       : 32px;
     padding-left : 12px;
     padding-right: 12px;
@@ -57,7 +62,20 @@
     color          : #00C810;
 }
 
-.login-submit-btn {
+.auth-errors {
+    color           : white;
+    border-radius   : 5px;
+    background-color: salmon;
+    margin-top      : 15px;
+    padding         : 12px;
+}
+
+.hide-errors {
+    visibility: hidden;
+}
+
+.login-submit-btn,
+.signup-submit-btn {
     /* border: 1px solid black; */
     text-align      : center;
     background-color: #00C810;

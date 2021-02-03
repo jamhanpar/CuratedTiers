@@ -39,7 +39,6 @@ export const signup = (user) => (dispatch) => APIUtil.signup(user)
     }));
   })
   .catch((err) => {
-    debugger
     dispatch(receiveErrors(err.response.data))
   })
 

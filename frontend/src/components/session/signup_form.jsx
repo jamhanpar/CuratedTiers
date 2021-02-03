@@ -33,11 +33,12 @@ class SignupForm extends React.Component {
       verifiedPassword: this.state.verifiedPassword,
     };
 
-    this.props.signup(user);
-    this.props.closeModal();
-    if (this.props.signedIn) {
-      this.props.history.push('/')
-    }
+    this.props.signup(user).then(() => {
+      if (this.props.isAuthenticated) {
+        this.props.closeModal();
+        this.props.history.push("/")
+      }
+    })
   }
 
   componentWillUnmount() {
@@ -45,8 +46,9 @@ class SignupForm extends React.Component {
   }
 
   renderErrors() {
+    const errorStatus = Object.values(this.props.errors).length ? "" : "hide-errors"
     return (
-      <ul>
+      <ul className={`auth-errors ${errorStatus}`}>
         {Object.values(this.props.errors).map((error, i) => (
           <li key={`error-${i}`}>{error}</li>
         ))}
@@ -59,37 +61,57 @@ class SignupForm extends React.Component {
       <div className="signup-form-container">
         <form onSubmit={this.handleSubmit}>
           <div className="signup-form">
+            <header>
+                <p className="welcome">Create Your Account</p>
+            </header>
             <br />
+            <div className="email-label">
+                <label htmlFor="email">Email</label>
+            </div>
             <input
+              className="email"
               type="text"
               value={this.state.email}
               onChange={this.update("email")}
               placeholder="Email"
             />
             <br />
+            <div className="username-label">
+                <label htmlFor="email">Username</label>
+            </div>
             <input
+              className="username"
               type="text"
               value={this.state.handle}
               onChange={this.update("username")}
               placeholder="Username"
             />
             <br />
+            <div className="password-label">
+                <label htmlFor="password">Password</label>
+            </div>
             <input
+              className="password"
               type="password"
               value={this.state.password}
               onChange={this.update("password")}
               placeholder="Password"
             />
             <br />
+            <div className="password-label">
+                <label htmlFor="password">Repeat Password</label>
+            </div>
             <input
+              className="password"
               type="password"
               value={this.state.verifiedPassword}
               onChange={this.update("verifiedPassword")}
               placeholder="Confirm Password"
             />
+            <br/>
+            {this.props.errors.length ? "" : this.renderErrors()}
             <br />
-            <input type="submit" value="Submit" />
-            {this.renderErrors()}
+            <input className="signup-submit-btn" type="submit" value="Submit" />
           </div>
         </form>
       </div>
