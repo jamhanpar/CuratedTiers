@@ -6,7 +6,6 @@ class PdtIndexItem extends React.Component {
   }
 
   render() {
-    debugger
     return ( 
     // <div>
         <li>

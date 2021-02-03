@@ -21,26 +21,20 @@ class IndexPage extends React.Component {
   }
 
   componentDidMount() {
-debugger
     // const { searchTerm } = this.props.location;
 
     const searchTerm = localStorage.searchTerm;
-debugger 
     this.props.fetchProducts(searchTerm);
   }
 
   render() {
-    // debugger
     if (this.props.products.length === undefined) {
-    // debugger
       return (
         <div>Loading...</div>
       )
     } else {
-  // debugger
       const products = this.props.products;
       const { searchTerm } = this.props.location;
-  debugger
       const numItems = products.length;
       // const priceArr = products.map( (product) => product.price.current_price)
       const priceArr = products.map((product) => [
@@ -56,7 +50,6 @@ debugger
         product.title,
         product.url,
       ]);
-  debugger 
       // const mean = priceArr.reduce((a,b) => a+b) / numItems
       // const sd = Math.sqrt(
       //   priceArr.map((x) => Math.pow(x - mean, 2)).reduce((a, b) => a + b) / numItems
@@ -74,46 +67,36 @@ debugger
 
       priceArr.forEach ( (pdt) => {
         if (count < numTier) {
-    // debugger
           lowTier.push(pdt)
         } else if (count >= numTier && count < (numTier * 2)) {
-    // debugger;
           midTier.push(pdt)
         } else {
-    // debugger
           highTier.push(pdt)
         }
         count += 1; 
-    // debugger;
       })
-  debugger
        
       lowTier.sort(function (a, b) {
         return b[2] - a[2];
       });
 
-  debugger;
       midTier.sort(function (a, b) {
         return b[2] - a[2];
       });
 
-  debugger;
       highTier.sort(function (a, b) {
         return b[2] - a[2];
       });
 
-  debugger;
 
 
 
-  // debugger
       return (
         <div className="index-page">
           <div className="low-tier">
             <span>Value</span>
             <ul>
               {lowTier.map((pdt, i) => {
-                debugger;
                 return <li key={`pdt-${i}`}> Title: {pdt[9]} <br/> Price: {pdt[1]} <br/> Score: {pdt[2]} <img src={pdt[8]} alt=""/></li>;
 
                 // return
@@ -129,7 +112,6 @@ debugger
             <span>Mid Tier</span>
             <ul>
               {midTier.map((pdt, i) => {
-                debugger;
                 return <li key={`pdt-${i}`}> Title: {pdt[9]} <br/> Price: {pdt[1]} <br/> Score: {pdt[2]} <img src={pdt[8]} alt=""/></li>;
 
                 // return
@@ -145,7 +127,6 @@ debugger
             <span>High End</span>
             <ul>
               {highTier.map((pdt, i) => {
-                debugger;
                 return <li key={`pdt-${i}`}> Title: {pdt[9]} <br/> Price: {pdt[1]} <br/> Score: {pdt[2]} <img src={pdt[8]} alt=""/></li>;
 
                 // return
