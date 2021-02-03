@@ -2,6 +2,7 @@ import React from "react";
 import { withRouter } from "react-router";
 
 import './index.css'
+import PdtIndexItem from "./pdt_index_item";
 
 class IndexPage extends React.Component {
   constructor(props) {
@@ -97,27 +98,30 @@ class IndexPage extends React.Component {
   // debugger
       return (
         <div className="index-page">
-          <div className='low-tier'>
+          <div className="low-tier">
             <span>Low Tier</span>
-            {
-              lowTier.map( (pdt, i) => {
-                <li key={`pdt-${i}`}> {pdt[10]} </li>
-              })
-            }
+            <ul>
+              {lowTier.map((pdt, i) => {
+                debugger 
+                // return <li key={`pdt-${i}`}> {pdt[9]} </li>;
+                // return 
+                <PdtIndexItem
+                  key={i}
+                  pdt={pdt}
+                />;
+              })}
+            </ul>
           </div>
-          
-          <div className='mid-tier'>
+
+          <div className="mid-tier">
             <span>Mid Tier</span>
-
           </div>
-          
-          <div className='high-tier'>
+
+          <div className="high-tier">
             <span>High Tier</span>
-
           </div>
-    
         </div>
-      )
+      );
       
     } // closing brace for else statement 
   }

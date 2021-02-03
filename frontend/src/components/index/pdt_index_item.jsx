@@ -6,8 +6,14 @@ class PdtIndexItem extends React.Component {
   }
 
   render() {
-    return <div></div>;
-  }
+    debugger
+    return ( 
+    // <div>
+        <li>
+          {this.props.pdt[9]}
+        </li>
+    // </div>
+  )}
 }
 
 export default PdtIndexItem;
