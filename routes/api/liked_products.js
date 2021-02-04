@@ -20,22 +20,30 @@ router.get('/:id', (req, res) => {
 });
 
 router.post('/', passport.authenticate('jwt', { session: false }), (req, res) => {
-  const newLikedProduct = new LikedProduct({
-    user: req.body.user,
-    asin: req.body.asin,
-    currentPrice: req.body.currentPrice,
-    beforePrice: req.body.beforePrice,
-    savingsAmount: req.body.savingsAmount,
-    savingsPercent: req.body.savingsPercent,
-    rating: req.body.rating,
-    totalReviews: req.body.totalReviews,
-    score: req.body.score,
-    thumbnail: req.body.thumbnail,
-    title: req.body.title,
-    url: req.body.url
-  });
-
-  newLikedProduct.save().then(likedProduct => res.json(likedProduct))
+  LikedProduct.findOne({user: req.body.user, asin: req.body.asin})
+    .then(product => {
+      if (product) {
+        return res.status(400).json({ likedproduct: "Product is already liked"})
+      } else {
+        const newLikedProduct = new LikedProduct({
+          user: req.body.user,
+          asin: req.body.asin,
+          currentPrice: req.body.currentPrice,
+          beforePrice: req.body.beforePrice,
+          savingsAmount: req.body.savingsAmount,
+          savingsPercent: req.body.savingsPercent,
+          rating: req.body.rating,
+          totalReviews: req.body.totalReviews,
+          score: req.body.score,
+          thumbnail: req.body.thumbnail,
+          title: req.body.title,
+          url: req.body.url
+        });
+        
+        newLikedProduct.save().then(likedProduct => res.json(likedProduct))
+      }
+    }
+  )
 });
 
 router.patch('/:id', passport.authenticate('jwt', { session: false}), (req, res) => {
