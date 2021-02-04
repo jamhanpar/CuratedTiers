@@ -18,7 +18,7 @@ class SalesPage extends React.Component {
 
     // const searchTerm = localStorage.searchTerm;
 
-    this.props.fetchProducts("Today's Deals");
+    this.props.fetchProducts("Deals -clothing");
   }
 
   render() {

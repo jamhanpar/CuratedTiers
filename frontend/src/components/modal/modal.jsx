@@ -5,7 +5,10 @@ import ShowPage from '../show/show';
 import LogInContainer from '../session/login_form_container';
 import SignUpContainer from '../session/signup_form_container';
 
-import './modal.css'
+import './modal.css';
+import '../index/index.css';
+import '../stylesheets/content.css';
+import '../show/show.css';
 
 function Modal({modal, closeModal}) {
   if (!modal) {
@@ -18,7 +21,7 @@ function Modal({modal, closeModal}) {
     case "index_item":
       component = <ShowPage pdt={modal[1]}/>;
       width = `1220px`;
-      height = `1000px`;
+      height = `640px`;
       break;
     case "login":
       component = <LogInContainer />;

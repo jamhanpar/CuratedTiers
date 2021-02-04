@@ -31,7 +31,7 @@ class NavBar extends React.Component {
             className="login-btn"
             onClick={() => this.props.openModal({modal: `login`})}
           >
-            Log in
+            Login
           </button>
 
           {/* <Link to={"/signup"} style={{ textDecoration: "none" }}>
@@ -62,7 +62,7 @@ class NavBar extends React.Component {
                     <Link to={"/sales"} className="link-item"><FaTag className="nav-icon" />Deals</Link>
                   </li>
                   <li className="main-nav-item">
-                    <Link to={"/featured"} className="link-item"><FaStar className="nav-icon" />Surprise Me!</Link>
+                    <Link to={"/featured"} className="link-item"><FaStar className="nav-icon" />SurpriseMe!</Link>
                   </li>
               </ul>
             </div>

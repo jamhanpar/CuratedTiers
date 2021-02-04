@@ -1,10 +1,16 @@
 .heart-container {
-    background: none;
-    border    : none;
-    margin-left: 15px;
+    width          : 100%;
+    display        : flex;
+    justify-content: flex-end;
+    align-items    : center;
 }
 
-.heart-container:hover {
+.heart-btn-container {
+    background: none;
+    border    : none;
+}
+
+.heart-btn-container:hover {
     background: none;
     border    : none;
     cursor    : pointer;
@@ -13,6 +19,7 @@
 .unliked {
     color     : lightgrey;
     transition: ease 1s;
+    font-size : 18px;
 }
 
 .unliked:hover {
@@ -21,7 +28,8 @@
 }
 
 .liked {
-    color: black;
+    color    : black;
+    font-size: 18px;
 }
 
 .liked:hover {

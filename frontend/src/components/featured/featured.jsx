@@ -27,18 +27,44 @@ class FeaturedPage extends React.Component {
   }
   
   randomSearchGen() {
+    // "Amazon Best Seller Top 100",
+    // "Ny times best sellers",
+    // "Outdoor survival gear"
+    // "Decor",
+    // "Home Gym",
+    // "Health",
+    // "Wellness",
+    // "Garden",
+    // "Outdoor Living",
+    // "Office Upgrades",
+    // "Top Decor Trends"
     const search_options = [
-      // "Amazon Best Seller Top 100",
       "Quirky gifts",
       "Cool gadgets",
-      // "Ny times best sellers",
       "Popular board games",
       "Gifts for men",
       "Gifts for women",
       "Random cool stuff",
       "Useless gifts",
       "Fun home items",
-      // "Outdoor survival gear"
+      "Under $10",
+      "Handmade",
+      "Amazon Devices",
+      "Smart Home",
+      "Pet Supplies",
+      "Furniture",
+      "Robotime",
+      "Kaws",
+      "Lego",
+      "Fun",
+      "Workspace",
+      "Modern Planters",
+      "Travel",
+      "Pop culture",
+      "Snacks",
+      "Kitchen",
+      "Nintendo Switch",
+      "DIY Kits for Adults",
     ];
 
     return search_options[Math.floor(Math.random() * search_options.length)];
