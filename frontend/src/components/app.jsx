@@ -1,5 +1,5 @@
 import React from "react";
-import { AuthRoute } from "../util/route_util";
+import { AuthRoute, ProtectedRoute } from "../util/route_util";
 import { Switch, Route } from "react-router-dom";
 import NavBarContainer from "./universal/navbar/navbar_container";
 import HomePage from "./home/home_page";
@@ -20,7 +20,7 @@ const App = () => (
       <Route exact path="/" component={HomePage} />
       <AuthRoute exact path="/sales" component={SalesPageContainer} />
       <AuthRoute exact path="/featured" component={FeaturedPageContainer} />
-      <AuthRoute exact path="/user/:user_id" component={UserProfileContainer} />
+      <ProtectedRoute exact path="/user/:user_id" component={UserProfileContainer} />
       {/* <AuthRoute exact path="/login" component={LoginFormContainer} />
       <AuthRoute exact path="/signup" component={SignupFormContainer} /> */}
 
