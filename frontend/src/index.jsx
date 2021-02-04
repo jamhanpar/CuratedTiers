@@ -8,6 +8,9 @@ import { setAuthToken } from "./util/session_api_util";
 import { logout } from "./actions/session_actions";
 import {fetchProducts} from "./actions/product_actions";
 
+//testing
+import {productRequest} from "./util/rapid_api_util";
+
 document.addEventListener("DOMContentLoaded", () => {
   let store;
 
@@ -38,6 +41,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const root = document.getElementById("root");
   window.dispatch = store.dispatch;
   window.fetchProducts = fetchProducts;
+
+  //testing
+  window.productRequest = productRequest;
 
   ReactDOM.render(<Root store={store} />, root);
 });

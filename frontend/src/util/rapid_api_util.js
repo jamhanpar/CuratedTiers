@@ -16,3 +16,9 @@ export const productReq = (category) => {
     return axios.request(options)
 }
 
+
+
+export const productRequest = ( async category => {
+  const api_url = `/api/rapids/products/${category}`;
+  return await axios.get(api_url);
+})

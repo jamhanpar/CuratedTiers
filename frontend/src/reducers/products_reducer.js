@@ -4,7 +4,7 @@ const ProductsReducer = (state = {}, action ) => {
     Object.freeze(state);
     switch (action.type) {
         case RECEIVE_PRODUCTS:
-            return action.products.data.products;
+            return action.products.data;
         case RESET_PRODUCTS:
             return {};
         default:    
