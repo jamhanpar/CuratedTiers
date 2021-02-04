@@ -7,6 +7,7 @@ import jwt_decode from "jwt-decode";
 import { setAuthToken } from "./util/session_api_util";
 import { logout } from "./actions/session_actions";
 import {fetchProducts} from "./actions/product_actions";
+import {fetchLikedProducts} from "./actions/like_actions";
 
 //testing
 import {productRequest} from "./util/rapid_api_util";
@@ -41,6 +42,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const root = document.getElementById("root");
   window.dispatch = store.dispatch;
   window.fetchProducts = fetchProducts;
+  window.fetchLikedProducts = fetchLikedProducts
+
 
   //testing
   window.productRequest = productRequest;
