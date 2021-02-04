@@ -1,8 +1,9 @@
 import React from "react";
 import { withRouter } from "react-router";
-
-import './index.css'
 import PdtIndexItem from "./pdt_index_item";
+import './index.css'
+import ShoppingLoadIcon from "../../img/Shopping-1.5s-200px.gif"
+
 
 class IndexPage extends React.Component {
   constructor(props) {
@@ -27,7 +28,9 @@ class IndexPage extends React.Component {
     if (this.props.products.length === undefined) {
      
       return (
-        <div>Loading...</div>
+        <div className="loading-gif">
+          <img src={ShoppingLoadIcon} alt="Loading..." className="shopping-gif"/>
+        </div>
       )
     } else {
    

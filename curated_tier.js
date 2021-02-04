@@ -1,12 +1,14 @@
 const express = require("express");
 const app = express();
 const db = require('./config/keys').mongoURI;
+const rapKey = require('./config/keys').rapidAPIKey
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const passport = require('passport');
 
 const users = require("./routes/api/users");
 const likedProducts = require("./routes/api/liked_products");
+const rapids = require("./routes/api/rapid_api");
 
 mongoose
   .connect(db, { useNewUrlParser: true })
@@ -15,7 +17,7 @@ mongoose
 
 
 
-app.get("/", (req, res) => res.send("Hello mern project!!"));
+// app.get("/", (req, res) => res.send("This is working"));
 
 app.use(passport.initialize());
 require('./config/passport')(passport);
@@ -25,6 +27,7 @@ app.use(bodyParser.json());
 
 app.use("/api/users", users);
 app.use("/api/liked_products", likedProducts);
+app.use("/api/rapids", rapids);
 
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static('frontend/build'));

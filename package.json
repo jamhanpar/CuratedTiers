@@ -12,6 +12,7 @@
     "jsonwebtoken": "^8.5.1",
     "jwt-decode": "^3.1.2",
     "mongoose": "^5.11.14",
+    "node-fetch": "^2.6.1",
     "nodemon": "^2.0.7",
     "passport": "^0.4.1",
     "passport-jwt": "^4.0.0",
@@ -26,6 +27,7 @@
   "scripts": {
     "start": "node curated_tier.js",
     "server": "nodemon curated_tier.js",
+    "server:debug": "nodemon --inspect curated_tier.js",
     "frontend-install": "npm install --prefix frontend",
     "frontend": "npm start --prefix frontend",
     "dev": "concurrently \"npm run server\" \"npm run frontend\"",

@@ -2,3 +2,4 @@
 /config/keys_development.js
 /frontend/.env
 /frontend/.eslintcache
+/frontend/config/keys_development.js
