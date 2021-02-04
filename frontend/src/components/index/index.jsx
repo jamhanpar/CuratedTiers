@@ -112,24 +112,21 @@ class IndexPage extends React.Component {
 
   // debugger
       return (
-        <div className="index-page">
+        <section className="content-container">
+          <div className="index-page">
+            <div className="tier-title-list">
+              <h1 className="tier-title">Value</h1>
+              <h1 className="tier-title">Mid Tier</h1>
+              <h1 className="tier-title">High End</h1>
+            </div>
 
-          <div className="low-tier">
-            <span>Value</span>
-            <ul>{lowTierList}</ul>
+            <div className="tier-list">
+              <ul>{lowTierList}</ul>
+              <ul>{midTierList}</ul>
+              <ul>{highTierList}</ul>
+            </div>
           </div>
-
-          <div className="mid-tier">
-            <span>Mid Tier</span>
-            <ul>{midTierList}</ul>
-          </div>
-
-          <div className="high-tier">
-            <span>High End</span>
-            <ul>{highTierList}</ul>
-          </div>
-
-        </div>
+        </section>
       ); 
     }
   }
