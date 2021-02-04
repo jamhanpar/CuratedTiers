@@ -5,14 +5,12 @@ import { fetchCurrentUser } from '../../actions/current_user_actions';
 import { openModal } from '../../actions/modal_actions'
 
 const mapStateToProps = (state) => {
-  debugger
   const likedProductsObject = {};
   if (Object.keys(state.likedProducts).length > 0) {
     state.likedProducts.list.map( product => {
       likedProductsObject[product.asin] = product
     })
   } 
-  debugger
   return {
     likedProducts: likedProductsObject,
     currentUser: state.session.user,

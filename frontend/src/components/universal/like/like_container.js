@@ -4,14 +4,12 @@ import Like from './like';
 import { createLikedProduct, deleteLikedProduct } from '../../../actions/like_actions';
 
 const msp = (state, ownProps) => {
-  debugger
   const productListObject = {};
-  state.likedProducts.list.map( product => {
-    productListObject[product.asin] = product._id
-  })
-
-
-  debugger
+  if (Object.keys(state.likedProducts).length > 0) {
+    state.likedProducts.list.map( product => {
+      productListObject[product.asin] = product._id
+    })
+  }
   return {
     product: ownProps.props,
     userId: state.session.user.id,

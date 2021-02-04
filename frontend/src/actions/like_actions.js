@@ -39,7 +39,6 @@ export const fetchLikedProduct = (likedProductId) => dispatch => (
 );
 
 export const createLikedProduct = data => dispatch => {
-  debugger
   return addLikedProduct(data)
   .then(res => dispatch(receiveLikedProduct(res.data)),
   err => dispatch(receiveErrors(err)))

@@ -14,7 +14,6 @@ class Like extends React.Component {
 
   handleClick(e) {
     e.preventDefault();
-    debugger
     const product = this.props.product;
     if (this.state.liked === false) {
       this.props.createLikedProduct({
@@ -32,7 +31,6 @@ class Like extends React.Component {
         url: product.url
       }).then(() => this.setState({liked: true}))
     } else {
-      debugger
       this.props.deleteLikedProduct(this.props.productList[this.props.product.asin]).then(
         () => this.setState({liked: false})
       )

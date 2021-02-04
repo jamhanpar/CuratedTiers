@@ -7,14 +7,12 @@ import ShoppingLoadIcon from "../../img/Shopping-1.5s-200px.gif"
 class UserProfile extends React.Component {
   
   componentDidMount() {
-    debugger
     this.props.fetchLikedProducts(this.props.currentUser.id);
     this.props.fetchCurrentUser();
   }
   
   render() {
     if (Object.keys(this.props.likedProducts).length < 1) {
-      debugger
       return (
         <div className="loading-gif">
           <h1>Your collection is empty!</h1>
@@ -22,7 +20,6 @@ class UserProfile extends React.Component {
         </div>
       )
     } else {
-      debugger
       const likedProducts = Object.values(this.props.likedProducts)
       return (
 
