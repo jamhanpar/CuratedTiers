@@ -1,4 +1,5 @@
 import React from "react";
+import LikedContainer from "../universal/like/like_container";
 import ShoppingLoadIcon from "../../img/Shopping-1.5s-200px.gif";
 import '../stylesheets/content.css';
 

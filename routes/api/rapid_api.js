@@ -1,16 +1,15 @@
 const express = require("express");
 const router = express.Router();
 const keys = require('../../config/keys');
-const fetch = require('node-fetch');
 const axios = require("axios").default;
 
 
-router.get("/test", (req, res) => res.json({ msg: "this is the products route"}));
+// router.get("/test", (req, res) => res.json({ msg: "this is the products route"}));
 
 router.get('/products/:category', async (req, res) => {
-  console.log(req)
+  // console.log(req)
   const category = req.params.category
-  console.log(category)
+  // console.log(category)
   const options = {
     method: 'GET',
     url: 'https://amazon-product-reviews-keywords.p.rapidapi.com/product/search',
@@ -21,14 +20,11 @@ router.get('/products/:category', async (req, res) => {
     }
   };
   options.params.keyword = category;
-  console.log(options)
-  debugger
+  // console.log(options)
+  // debugger
   await axios.request(options)
     .then( response => res.send(response.data.products))
     .catch( err => res.status(500).json({ noproductfound: "No products found!"}))
 });
-
-
-
 
 module.exports = router;
