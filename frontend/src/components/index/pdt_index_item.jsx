@@ -45,7 +45,7 @@ const PdtIndexItem = (props) => {
   
   let title = props.pdt[9]
   let currentPrice = props.pdt[1]
-  let rating = props.pdt[7]
+  // let rating = props.pdt[7]
   let thumbnail = props.pdt[8]
 
   const { pdt, likedProduct } = props;
