@@ -10,7 +10,7 @@ const LikedProductsReducer = (state = {}, action) => {
     case RECEIVE_LIKED_PRODUCTS:
       return Object.assign({}, state, action.likedProducts)
     case RECEIVE_LIKED_PRODUCT:
-      return Object.assign({}, state, { [action.likedProduct.id]: action.likedProduct})
+      return Object.assign({}, state, { [action.likedProduct.asin]: action.likedProduct})
     case REMOVE_LIKED_PRODUCT:
       const newState = Object.assign({}, state);
       delete newState[action.likedProducts.id];

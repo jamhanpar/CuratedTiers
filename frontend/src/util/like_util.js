@@ -16,6 +16,6 @@ export const updateLikedProduct = data => (
   axios.patch(`/api/liked_products/${data.id}`, data)
 )
 
-export const destroyLikedProduct = id => (
-  axios.delete(`/api/liked_products/${id}`)
+export const destroyLikedProduct = (productId) => (
+  axios.delete(`/api/liked_products/${productId}`)
 );
