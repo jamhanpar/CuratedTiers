@@ -21,18 +21,14 @@ router.get('/:id', (req, res) => {
 
 router.post('/', passport.authenticate('jwt', { session: false }), (req, res) => {
   const newLikedProduct = new LikedProduct({
-    user: req.user.id,
+    user: req.body.user,
     asin: req.body.asin,
-    price: {
-      beforePrice: req.body.price.beforePrice,
-      currentPrice: req.body.price.currentPrice,
-      savingsAmount: req.body.price.savingsAmount,
-      savingsPercent: req.body.price.savingsPercent
-    },
-    reviews: {
-      rating: req.body.reviews.rating,
-      totalReviews: req.body.reviews.totalReviews
-    },
+    currentPrice: req.body.currentPrice,
+    beforePrice: req.body.beforePrice,
+    savingsAmount: req.body.savingsAmount,
+    savingsPercent: req.body.savingsPercent,
+    rating: req.body.rating,
+    totalReviews: req.body.totalReviews,
     score: req.body.score,
     thumbnail: req.body.thumbnail,
     title: req.body.title,

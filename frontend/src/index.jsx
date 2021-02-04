@@ -11,6 +11,7 @@ import {fetchLikedProducts} from "./actions/like_actions";
 
 //testing
 import {productRequest} from "./util/rapid_api_util";
+import {addLikedProduct} from "./util/like_util";
 
 document.addEventListener("DOMContentLoaded", () => {
   let store;
@@ -47,6 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   //testing
   window.productRequest = productRequest;
+  window.addLikedProduct = addLikedProduct;
 
   ReactDOM.render(<Root store={store} />, root);
 });

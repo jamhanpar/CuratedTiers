@@ -10,31 +10,27 @@ const LikedProductSchema = new Schema({
     type: String,
     required: true 
   },
-  price: {
-    beforePrice: {
-      type: Number,
-      required: true
-    },
-    currentPrice: {
-      type: Number,
-      required: true
-    },
-    savingsAmount: {
-      type: Number
-    },
-    savingsPercent: {
-      type: Number
-    }
+  beforePrice: {
+    type: Number,
+    required: true
   },
-  reviews: {
-    rating: {
-      type: Number,
-      required: true
-    },
-    totalReviews: {
-      type: Number,
-      required: true 
-    }
+  currentPrice: {
+    type: Number,
+    required: true
+  },
+  savingsAmount: {
+    type: Number
+  },
+  savingsPercent: {
+    type: Number
+  },
+  rating: {
+    type: Number,
+    required: true
+  },
+  totalReviews: {
+    type: Number,
+    required: true 
   },
   score: {
     type: Number,
