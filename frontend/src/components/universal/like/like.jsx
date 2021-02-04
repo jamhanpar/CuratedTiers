@@ -1,4 +1,5 @@
 import React from "react";
+import { FaHeart } from "react-icons/fa";
 
 class Like extends React.Component {
   constructor(props) {
@@ -9,18 +10,16 @@ class Like extends React.Component {
   }
 
   render() {
-    const likedStatus = this.state.liked === false ? "unliked" : "liked"
-    const handleClick = likedStatus === "unliked" ? (
-      () => this.props.createLikedProduct(this.props.product)
-      ) : (
-        () => this.props.deleteLikedProduct(this.props.product.id)
-      )
-
+    const likedStatus = this.state.liked === false ? "unliked" : "liked";
+    const handleClick =
+      likedStatus === "unliked"
+        ? () => this.props.createLikedProduct(this.props.product)
+        : () => this.props.deleteLikedProduct(this.props.product.id);
 
     return (
       <div>
         <button className={likedStatus} onClick={handleClick}>
-          Heart
+          <FaHeart className="heart-icon" />
         </button>
       </div>
     );

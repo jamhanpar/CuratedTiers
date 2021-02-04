@@ -75,7 +75,7 @@
     visibility: hidden;
 }
 
-.login-submit-btn,
+.session-submit-btn,
 .signup-submit-btn {
     /* border: 1px solid black; */
     text-align      : center;
@@ -90,11 +90,15 @@
     margin-top      : 50px;
 }
 
-.login-submit-btn:hover { 
+.session-submit-btn:hover { 
     background-color: #19b49a;
     cursor: pointer;
 }
 
-.login-submit-btn:focus {
+.session-submit-btn:focus {
     outline: none;
+}
+
+.demo-btn {
+    margin-left: 15px;
 }

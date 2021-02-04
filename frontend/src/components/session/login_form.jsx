@@ -8,8 +8,13 @@ class LoginForm extends React.Component {
 
     this.state = {
       email: "",
-      password: ""
+      password: "",
     };
+
+    this.demo = {
+      email: "demo@email.com",
+      password: "password"
+    }
 
     this.handleSubmit = this.handleSubmit.bind(this);
     this.renderErrors = this.renderErrors.bind(this);
@@ -35,22 +40,25 @@ class LoginForm extends React.Component {
     this.props.login(user).then(() => {
       if (this.props.isAuthenticated) {
         this.props.closeModal();
-        this.props.history.push("/")
+        this.props.history.push("/");
       }
-    })
+    });
   }
 
   componentWillUnmount() {
-    this.props.receiveErrors([])
+    this.props.receiveErrors([]);
   }
 
   // Render the session errors if there are any
   renderErrors() {
-    const errorStatus = Object.values(this.props.errors).length > 0 ? "" : "hide-errors"
+    const errorStatus =
+      Object.values(this.props.errors).length > 0 ? "" : "hide-errors";
     return (
       <ul className={`auth-errors ${errorStatus}`}>
         {Object.values(this.props.errors).map((error, i) => (
-          <li className="error-item" key={`error-${i}`}>{error}</li>
+          <li className="error-item" key={`error-${i}`}>
+            {error}
+          </li>
         ))}
       </ul>
     );
@@ -60,42 +68,49 @@ class LoginForm extends React.Component {
     return (
       <div className="login-form-container">
         <form className="login-form" onSubmit={this.handleSubmit}>
-            <header>
-                <p className="welcome">Welcome to Curated Tiers</p>
-            </header>
-            <div className="email-label">
-                <label htmlFor="email">Email</label>
-            </div>
-            <div className="email-input-container">
-                <input
-                  className="email"
-                  type="text"
-                  value={this.state.email}
-                  onChange={this.update("email")}
-                  placeholder="Email"
-                />
-            </div>
+          <header>
+            <p className="welcome">Welcome to Curated Tiers</p>
+          </header>
+          <div className="email-label">
+            <label htmlFor="email">Email</label>
+          </div>
+          <div className="email-input-container">
+            <input
+              className="email"
+              type="text"
+              value={this.state.email}
+              onChange={this.update("email")}
+              placeholder="Email"
+            />
+          </div>
 
-            <div className="password-label">
-                <label htmlFor="password">Password</label>
-            </div>
-            <div className="password-input-container">
-                <input
-                  className="password"
-                  type="password"
-                  value={this.state.password}
-                  onChange={this.update("password")}
-                  placeholder="Password"
-                />
-            </div>
+          <div className="password-label">
+            <label htmlFor="password">Password</label>
+          </div>
+          <div className="password-input-container">
+            <input
+              className="password"
+              type="password"
+              value={this.state.password}
+              onChange={this.update("password")}
+              placeholder="Password"
+            />
+          </div>
 
-            <div className="forgot-password-container">
-                <a className="forgot-password-link" href="#">Forgot your username or password?</a>
-            </div>
+          <div className="forgot-password-container">
+            <a className="forgot-password-link" href="#">
+              Forgot your username or password?
+            </a>
+          </div>
 
-            {this.props.errors.length ? "" : this.renderErrors()}
+          {this.props.errors.length ? "" : this.renderErrors()}
 
-            <button className="login-submit-btn" type="submit">Sign In</button>
+          <button className="session-submit-btn" type="submit">
+            Sign In
+          </button>
+          <button className="session-submit-btn demo-btn" onClick={() => this.props.login(this.demo)}>
+            Demo
+          </button>
         </form>
       </div>
     );
