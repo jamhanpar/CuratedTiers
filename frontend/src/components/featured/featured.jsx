@@ -28,20 +28,17 @@ class FeaturedPage extends React.Component {
   
   randomSearchGen() {
     const search_options = [
-      "Amazon Best Seller Top 100",
+      // "Amazon Best Seller Top 100",
       "Quirky gifts",
       "Cool gadgets",
-      "Ny times best sellers",
+      // "Ny times best sellers",
       "Popular board games",
       "Gifts for men",
       "Gifts for women",
       "Random cool stuff",
-      "Shoes",
-      "Hats",
-      "Face masks",
-      "Smartwatches",
-      "Laptops",
-      "Wireless earbuds",
+      "Useless gifts",
+      "Fun home items",
+      // "Outdoor survival gear"
     ];
 
     return search_options[Math.floor(Math.random() * search_options.length)];
@@ -51,6 +48,7 @@ class FeaturedPage extends React.Component {
     e.preventDefault();
 
     this.props.resetProducts(); 
+    this.randomSearch = this.randomSearchGen();
     this.props.fetchProducts(this.randomSearch);
   }
 
