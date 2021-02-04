@@ -29,7 +29,7 @@ class NavBar extends React.Component {
         <div className="user-auth-container">
           <button
             className="login-btn"
-            onClick={() => this.props.openModal(`login`)}
+            onClick={() => this.props.openModal({modal: `login`})}
           >
             Log in
           </button>
@@ -40,7 +40,7 @@ class NavBar extends React.Component {
 
           <button
             className="join-btn"
-            onClick={() => this.props.openModal(`signup`)}
+            onClick={() => this.props.openModal({modal: `signup`})}
           >
             Signup
           </button>
