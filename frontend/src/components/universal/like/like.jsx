@@ -6,7 +6,7 @@ class Like extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      liked: false
+      liked: (this.props.productId ? true : false)
     };
 
     this.handleClick = this.handleClick.bind(this);
@@ -31,7 +31,7 @@ class Like extends React.Component {
         url: product.url
       }).then(() => this.setState({liked: true}))
     } else {
-      this.props.deleteLikedProduct(this.props.productId).then(
+      this.props.deleteLikedProduct(this.props.productId.id).then(
         () => this.setState({liked: false})
       )
     }
@@ -42,7 +42,7 @@ class Like extends React.Component {
     
     return (
       <div className="heart-container">
-        <button className="heart-btn-container" onClick={handleClick}>
+        <button className="heart-btn-container" onClick={this.handleClick}>
           <FaHeart className={likedStatus} />
         </button>
       </div>

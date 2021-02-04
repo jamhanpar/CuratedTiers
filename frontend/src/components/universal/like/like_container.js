@@ -4,11 +4,10 @@ import Like from './like';
 import { createLikedProduct, deleteLikedProduct } from '../../../actions/like_actions';
 
 const msp = (state, ownProps) => {
-  debugger
   return {
     product: ownProps.props,
     userId: state.session.user.id,
-    productId: state.likedProducts[ownProps.props.asin].id
+    productId: state.likedProducts.likedProducts[ownProps.props.asin]
   }
 };
 

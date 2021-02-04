@@ -1,62 +1,57 @@
 import React from "react";
 import '../stylesheets/content.css';
 import '../stylesheets/reset.css';
-import PdtIndexItem from "../index/pdt_index_item"
+import PdtIndexItem from "../index/pdt_index_item";
+import ShoppingLoadIcon from "../../img/Shopping-1.5s-200px.gif"
 
 class UserProfile extends React.Component {
-  constructor(props) {
-    super(props)
-
-    this.state = {
-      likedProducts: []
-    }
-  }
   
-  componentWillMount(){
-    this.props.fetchLikedProducts(this.props.currentUser.id)
-  }
-
-  componentWillReceiveProps(newState) {
-    this.setState({likedProducts: newState.likedProducts})
+  componentDidMount() {
+    this.props.fetchLikedProducts(this.props.currentUser.id);
+    this.props.fetchCurrentUser();
   }
   
   render() {
-    const likedProducts = this.props.likedProducts
-
-
-    return (
-      <section className="content-container">
-
-        <div className="homepage-filter">
-          <ul className="filter-options-list">
-            <li className="filter-title-option">Trending</li>
-            <li className="filter-title-option">New</li>
-            <li className="filter-title-option">Most popular</li>
-          </ul>
+    if (!this.props.likedProducts) {
+      return (
+        <div className="loading-gif">
+          <img src={ShoppingLoadIcon} alt="Loading..." className="shopping-gif"/>
         </div>
-        <div className="product-list-container">
-          {this.state.likedProducts.map((likedProduct, i) => {
-            let pdt = [
-              likedProduct.asin, 
-              likedProduct.currentPrice, 
-              likedProduct.score, 
-              likedProduct.beforePrice, 
-              likedProduct.savingsAmount, 
-              likedProduct.savingsPercent, 
-              likedProduct.totalReviews, 
-              likedProduct.rating, 
-              likedProduct.thumbnail, 
-              likedProduct.title, 
-              likedProduct.url 
-            ]
+      )
+    } else {
+      const likedProducts = Object.values(this.props.likedProducts)
+      return (
 
-            return (
-              <PdtIndexItem key={`${i}`} likedProduct={likedProduct} pdt={pdt} openModal={this.props.openModal}  />
-            )
-          })}
-        </div>
-      </section>
-    );
+        <section className="content-container">
+          <div className="user-profile-wrapper">
+            <img></img>
+            <h1 className="user-handle">{this.props.currentUsername}</h1>
+          </div>
+          <div className="homepage-filter"></div>
+          <div className="product-list-container">
+            {likedProducts.map((likedProduct, i) => {
+              let pdt = [
+                likedProduct.asin, 
+                likedProduct.currentPrice, 
+                likedProduct.score, 
+                likedProduct.beforePrice, 
+                likedProduct.savingsAmount, 
+                likedProduct.savingsPercent, 
+                likedProduct.totalReviews, 
+                likedProduct.rating, 
+                likedProduct.thumbnail, 
+                likedProduct.title, 
+                likedProduct.url 
+              ]
+
+              return (
+                <PdtIndexItem key={`${i}`} likedProduct={likedProduct} pdt={pdt} openModal={this.props.openModal}  />
+              )
+            })}
+          </div>
+        </section>
+      );
+    }    
   }
 }
 
