@@ -73,7 +73,7 @@ props.pdt.map ( (ele, i) => {
         
         <div 
           className={`product-card ${props.tier}`} 
-          onClick={ () => props.openModal({modal: 'index_item', pdt: pdt })}
+          onClick={ () => props.openModal({modal: 'index_item', pdt: {pdt, pdtObj} })}
         >
               <div className="product-card-price-container">
                   <button className="product-card-price">{currentPrice}</button>
