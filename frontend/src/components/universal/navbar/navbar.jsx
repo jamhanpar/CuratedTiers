@@ -5,6 +5,9 @@ import "../../stylesheets/reset.css";
 import { FaHome, FaTag, FaStar, FaSearch } from "react-icons/fa";
 import Search from "../search/search";
 
+import Search from "../search/search_container";
+
+
 class NavBar extends React.Component {
   constructor(props) {
     super(props);
