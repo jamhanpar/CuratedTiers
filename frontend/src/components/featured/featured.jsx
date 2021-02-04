@@ -93,7 +93,7 @@ class FeaturedPage extends React.Component {
       const products = this.props.products;
       // const { searchTerm } = this.props.location;
 
-      const numItems = products.length;
+      // const numItems = products.length;
       // const priceArr = products.map( (product) => product.price.current_price)
       const priceArr = products.map((product) => [
         product.asin, // 0
@@ -109,14 +109,39 @@ class FeaturedPage extends React.Component {
         product.url, // 10
       ]);
 
-      // const mean = priceArr.reduce((a,b) => a+b) / numItems
-      // const sd = Math.sqrt(
-      //   priceArr.map((x) => Math.pow(x - mean, 2)).reduce((a, b) => a + b) / numItems
-      // );
-      priceArr.sort(function (a, b) {
-        return a[1] - b[1];
-      });
+      const priceArr_2 = []
 
+      priceArr.forEach( (product) => {
+        const test = product[9].slice(0,9)
+        if (test !== 'Sponsored') {
+          priceArr_2.push(product);
+        } 
+      })
+
+      priceArr_2.forEach( (product) => {
+        
+        const titleArr = product[9].split(' ')
+        const titleArr_2 = []
+        let title_2 = ""
+
+        titleArr.forEach ( (word) => {
+          if (title_2.length < 62 ) {
+            titleArr_2.push(word)
+          }  
+          title_2 = titleArr_2.join(' ')
+        })
+
+        product[9] = title_2
+        product[1] = Math.round(product[1]);
+        product[3] = Math.round(product[3]);
+      })
+
+
+      priceArr_2.sort(function(a,b) {
+        return a[1] - b[1];
+      })
+
+      const numItems = priceArr_2.length;
       const numTier = numItems / 3;
 
       let count = 0;
@@ -124,7 +149,7 @@ class FeaturedPage extends React.Component {
       let midTier = [];
       let highTier = [];
 
-      priceArr.forEach((pdt) => {
+      priceArr_2.forEach((pdt) => {
         if (count < numTier) {
           lowTier.push(pdt);
         } else if (count >= numTier && count < numTier * 2) {
