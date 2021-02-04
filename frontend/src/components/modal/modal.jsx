@@ -1,7 +1,7 @@
 import React from 'react';
 import { closeModal } from '../../actions/modal_actions';
 import { connect } from 'react-redux';
-import PdtIndexItem from '../index/pdt_index_item';
+import ShowPage from '../show/show';
 import LogInContainer from '../session/login_form_container';
 import SignUpContainer from '../session/signup_form_container';
 
@@ -14,9 +14,9 @@ function Modal({modal, closeModal}) {
   let component;
   let width;
   let height;
-  switch (modal) {
+  switch (modal[0]) {
     case "index_item":
-      component = <PdtIndexItem />;
+      component = <ShowPage pdt={modal[1]}/>;
       width = `1220px`;
       height = `1000px`;
       break;
@@ -44,9 +44,9 @@ function Modal({modal, closeModal}) {
   );
 }
 
-const mapStateToProps = state => {
+const mapStateToProps = (state, ownProps) => {
   return {
-    modal: state.ui.modal
+    modal: state.ui.modal,
   };
 };
 

@@ -104,19 +104,19 @@ class IndexPage extends React.Component {
       const lowTierList = lowTier.map( (pdt, i) => {
             return (
               //  debugger;
-               <PdtIndexItem key={`${i}`} pdt={pdt} tier='low-tier'/>
+               <PdtIndexItem key={`${i}`} pdt={pdt} tier='low-tier' openModal={this.props.openModal}/>
             )
       })
       const midTierList = midTier.map( (pdt, i) => {
             return (
               //  debugger;
-               <PdtIndexItem key={`${i}`} pdt={pdt} tier='mid-tier'/>
+               <PdtIndexItem key={`${i}`} pdt={pdt} tier='mid-tier' openModal={this.props.openModal}/>
             )
       })
       const highTierList = highTier.map( (pdt, i) => {
             return (
               //  debugger;
-               <PdtIndexItem key={`${i}`} pdt={pdt} tier='high-tier'/>
+               <PdtIndexItem key={`${i}`} pdt={pdt} tier='high-tier' openModal={this.props.openModal}/>
             )
       })
 

@@ -4,7 +4,7 @@ const ShowPage = (props) => {
 
   return (
     <div>
-
+      <span>{props.pdt[0]}</span>
     </div>
   )
 }

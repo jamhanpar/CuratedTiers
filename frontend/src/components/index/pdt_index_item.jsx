@@ -66,10 +66,15 @@ props.pdt.map ( (ele, i) => {
   const rating = props.pdt[7]
   const thumbnail = props.pdt[8]
 
+  const pdt = props.pdt
+
   return (
       <li>
         
-        <div className={`product-card ${props.tier}`}>
+        <div 
+          className={`product-card ${props.tier}`} 
+          onClick={ () => props.openModal({modal: 'index_item', pdt: pdt })}
+        >
               <div className="product-card-price-container">
                   <button className="product-card-price">{currentPrice}</button>
               </div>
