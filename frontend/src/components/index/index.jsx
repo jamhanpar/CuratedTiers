@@ -1,9 +1,8 @@
 import React from "react";
 import { withRouter } from "react-router";
 import PdtIndexItem from "./pdt_index_item";
-import './index.css'
-import ShoppingLoadIcon from "../../img/Shopping-1.5s-200px.gif"
-
+import ShoppingLoadIcon from "../../img/Shopping-1.5s-200px.gif";
+import './index.css';
 
 class IndexPage extends React.Component {
   constructor(props) {
@@ -26,7 +25,6 @@ class IndexPage extends React.Component {
   render() {
     
     if (this.props.products.length === undefined) {
-     
       return (
         <div className="loading-gif">
           <img src={ShoppingLoadIcon} alt="Loading..." className="shopping-gif"/>
@@ -70,13 +68,10 @@ class IndexPage extends React.Component {
 
       priceArr.forEach ( (pdt) => {
         if (count < numTier) {
-    
           lowTier.push(pdt)
         } else if (count >= numTier && count < (numTier * 2)) {
-    
           midTier.push(pdt)
         } else {
-    
           highTier.push(pdt)
         }
         count += 1; 
@@ -140,9 +135,8 @@ class IndexPage extends React.Component {
           </div>
 
         </div>
-      );
-      
-    } // closing brace for else statement 
+      ); 
+    }
   }
 }
 

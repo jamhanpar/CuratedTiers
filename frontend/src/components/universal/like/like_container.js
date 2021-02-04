@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import { withRouter} from 'react-router-dom';
 import Like from './like';
-import { createLikedProduct, deleteLikedProduct } from '../../actions/like_actions';
+import { createLikedProduct, deleteLikedProduct } from '../../../actions/like_actions';
 
 const msp = (state, ownProps) => ({
   product: ownProps.product

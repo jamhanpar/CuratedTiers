@@ -1,8 +1,6 @@
-
 import { connect } from "react-redux";
-
-import IndexPage from "./index";
 import { fetchProducts, resetProducts } from "../../actions/product_actions";
+import IndexPage from "./index";
 
 import {openModal} from '../../actions/modal_actions'
 

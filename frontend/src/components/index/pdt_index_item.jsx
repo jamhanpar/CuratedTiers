@@ -1,5 +1,5 @@
 import React from "react";
-import LikedContainer from '../like/like_container'
+import LikedContainer from '../universal/like/like_container'
 
 
 const PdtIndexItem = (props) => {
@@ -76,7 +76,7 @@ props.pdt.map ( (ele, i) => {
           onClick={ () => props.openModal({modal: 'index_item', pdt: {pdt, pdtObj} })}
         >
               <div className="product-card-price-container">
-                  <button className="product-card-price">{currentPrice}</button>
+                  <button className="product-card-price">${currentPrice}</button>
               </div>
               <div className="product-card-img-container">
                   <img className="product-card-img" src={thumbnail} alt=""/>
