@@ -28,11 +28,11 @@ class UserProfile extends React.Component {
       <section className="content-container">
 
         <div className="homepage-filter">
-            <ul className="filter-options-list">
-                <li>Trending</li>
-                <li>New</li>
-                <li>Most popular</li>
-            </ul>
+          <ul className="filter-options-list">
+            <li className="filter-title-option">Trending</li>
+            <li className="filter-title-option">New</li>
+            <li className="filter-title-option">Most popular</li>
+          </ul>
         </div>
         <div className="product-list-container">
           {this.state.likedProducts.map((likedProduct, i) => {

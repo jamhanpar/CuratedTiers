@@ -19,8 +19,9 @@
     flex-direction: row;
 }
 
-.filter-options-list>li {
-    font-size     : 18px;
+.filter-title-option {
+    font-size     : 15px;
+    color: grey;
     display       : flex;
     flex-direction: row;
     padding-right : 25px;
