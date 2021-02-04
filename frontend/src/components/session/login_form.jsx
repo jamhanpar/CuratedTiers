@@ -11,13 +11,9 @@ class LoginForm extends React.Component {
       password: "",
     };
 
-    this.demo = {
-      email: "demo@email.com",
-      password: "password"
-    }
-
     this.handleSubmit = this.handleSubmit.bind(this);
     this.renderErrors = this.renderErrors.bind(this);
+    this.handleDemoLogin = this.handleDemoLogin.bind(this);
   }
 
   // Handle field updates (called in the render method)
@@ -43,6 +39,21 @@ class LoginForm extends React.Component {
         this.props.history.push("/");
       }
     });
+  }
+
+  handleDemoLogin(e) {
+    e.preventDefault();
+    const demo = {
+      email: "demo@email.com",
+      password: "password"
+    };
+
+    this.props.login(demo).then(() => {
+      if (this.props.isAuthenticated) {
+        this.props.closeModal();
+        this.props.history.push("/");
+      }
+    })
   }
 
   componentWillUnmount() {
@@ -108,7 +119,7 @@ class LoginForm extends React.Component {
           <button className="session-submit-btn" type="submit">
             Sign In
           </button>
-          <button className="session-submit-btn demo-btn" onClick={() => this.props.login(this.demo)}>
+          <button className="session-submit-btn demo-btn" onClick={this.handleDemoLogin()}>
             Demo
           </button>
         </form>
