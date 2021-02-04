@@ -1,0 +1,32 @@
+
+.avatar {
+    height: 90px;
+    width: 90px;
+    opacity: .3;
+}
+
+.user-profile-wrapper {
+    height: 235px;
+    width: 1200px;
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 28px 0px 24px;
+}
+
+.user-handle {
+    font-size: 24px;
+    margin: 10px;
+    color: rgb(75, 75, 75);
+}
+.user-liked-products {
+    color: #ADADAD;
+    font-weight: bolder;
+}
+.user-like-count {
+    margin: 10px;
+    color:#ADADAD;
+    font-weight: bolder;
+}
