@@ -53,7 +53,6 @@ class IndexPage extends React.Component {
       const priceArr_2 = []
 
       priceArr.forEach( (product) => {
-        
         const test = product[9].slice(0,9)
         if (test !== 'Sponsored') {
           priceArr_2.push(product);
@@ -74,7 +73,6 @@ class IndexPage extends React.Component {
         })
 
         product[9] = title_2
-
         product[1] = Math.round(product[1]);
         product[3] = Math.round(product[3]);
       })
