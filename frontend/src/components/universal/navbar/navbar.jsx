@@ -62,7 +62,7 @@ class NavBar extends React.Component {
                     <Link to={"/sales"} className="link-item"><FaTag className="nav-icon" />Deals</Link>
                   </li>
                   <li className="main-nav-item">
-                    <Link to={"/featured"} className="link-item"><FaStar className="nav-icon" />Featured</Link>
+                    <Link to={"/featured"} className="link-item"><FaStar className="nav-icon" />Surprise Me!</Link>
                   </li>
               </ul>
             </div>

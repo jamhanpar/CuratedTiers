@@ -1,11 +1,13 @@
 .heart-container {
-    border: 1px solid black;
     background: none;
+    border    : none;
+    margin-left: 15px;
 }
 
 .heart-container:hover {
     background: none;
     border    : none;
+    cursor    : pointer;
 }
 
 .unliked {
@@ -14,7 +16,7 @@
 }
 
 .unliked:hover {
-    color: black;
+    color     : black;
     transition: ease 1s;
 }
 

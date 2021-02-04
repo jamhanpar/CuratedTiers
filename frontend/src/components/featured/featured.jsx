@@ -2,23 +2,56 @@ import React from "react";
 import { withRouter } from "react-router";
 import PdtIndexItem from "../index/pdt_index_item";
 import ShoppingLoadIcon from "../../img/Shopping-1.5s-200px.gif";
+import "./featured.css";
 import "../index/index.css";
 import "../stylesheets/content.css"
 
 class FeaturedPage extends React.Component {
   constructor(props) {
     super(props);
-  }
 
+    this.randomSearch = 'Quirky Gifts';
+
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+  
   componentWillUnmount() {
     this.props.resetProducts();
   }
-
+  
   componentDidMount() {
     // const { searchTerm } = this.props.location;
     // const searchTerm = localStorage.searchTerm;
+    
+    this.props.fetchProducts(this.randomSearch);
+  }
+  
+  randomSearchGen() {
+    const search_options = [
+      "Amazon Best Seller Top 100",
+      "Quirky gifts",
+      "Cool gadgets",
+      "Ny times best sellers",
+      "Popular board games",
+      "Gifts for men",
+      "Gifts for women",
+      "Random cool stuff",
+      "Shoes",
+      "Hats",
+      "Face masks",
+      "Smartwatches",
+      "Laptops",
+      "Wireless earbuds",
+    ];
 
-    this.props.fetchProducts("Amazon Best Seller Top 100 Products");
+    return search_options[Math.floor(Math.random() * search_options.length)];
+  };
+
+  handleSubmit(e) {
+    e.preventDefault();
+
+    this.props.resetProducts(); 
+    this.props.fetchProducts(this.randomSearch);
   }
 
   render() {
@@ -127,12 +160,19 @@ class FeaturedPage extends React.Component {
       // debugger
       return (
         <section className="content-container">
+          <div className="search-display-container">
+            <div className="search-display">{this.randomSearch}</div>
+            <button className="surprise-me-btn" onClick={this.handleSubmit}>
+              Click Me!
+            </button>
+          </div>
+
           <div className="index-page">
-            <div className="tier-title-list">
+            {/* <div className="tier-title-list">
               <h1 className="tier-title">Value</h1>
               <h1 className="tier-title">Mid Tier</h1>
               <h1 className="tier-title">High End</h1>
-            </div>
+            </div> */}
 
             <div className="tier-list">
               <ul>{lowTierList}</ul>

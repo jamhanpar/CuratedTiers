@@ -1,8 +1,8 @@
 import { connect } from "react-redux";
 import { fetchProducts, resetProducts } from "../../actions/product_actions";
+import {openModal} from '../../actions/modal_actions'
 import IndexPage from "./index";
 
-import {openModal} from '../../actions/modal_actions'
 
 const mapStateToProps = (state) => ({
   products: state.products,
