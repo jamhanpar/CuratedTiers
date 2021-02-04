@@ -1,0 +1,30 @@
+.heart-container {
+    background: none;
+    border    : none;
+    margin-left: 15px;
+}
+
+.heart-container:hover {
+    background: none;
+    border    : none;
+    cursor    : pointer;
+}
+
+.unliked {
+    color     : lightgrey;
+    transition: ease 1s;
+}
+
+.unliked:hover {
+    color     : black;
+    transition: ease 1s;
+}
+
+.liked {
+    color: black;
+}
+
+.liked:hover {
+    color     : lightgrey;
+    transition: ease 1s;
+}
