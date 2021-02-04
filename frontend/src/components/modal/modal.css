@@ -9,6 +9,7 @@
 }
 
 .modal-component {
+  border-radius: 10px;
   background: white;
   position  : absolute;
   top       : 50%;

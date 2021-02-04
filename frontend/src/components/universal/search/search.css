@@ -7,19 +7,19 @@
 }
 
 .search-input-form {
-    width: auto;
+    width : auto;
     height: auto;
 }
 
 .home-search-bar {
-    outline: none;
-    border: none;
+    outline      : none;
+    border       : none;
     border-radius: 50px;
-    background: white;
-    width     : 1000px;
-    height    : auto;
-    font-size : 150px;
-    padding-left: 40px;
+    background   : white;
+    width        : 1000px;
+    height       : auto;
+    font-size    : 150px;
+    padding-left : 40px;
 }
 
 .home-search-bar::placeholder {

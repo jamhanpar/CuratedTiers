@@ -28,18 +28,21 @@ const ShowPage = (props) => {
         </div>
         <div className="show-liked-container">
           <LikedContainer props={props.pdt.pdtObj} />
-          <p className="like-text">LIKE</p>
+          {/* <p className="like-text">LIKE</p> */}
         </div>
       </div>
 
       <div className="show-card-right">
         <div className="show-card-info-container">
           <h1 className="show-card-info">{title}</h1>
-          <h1 className="show-card-info">{rating}</h1>
-          <h1 className="show-card-info">{totalReviews}</h1>
+          <h1 className="show-card-info-tiny">Rating: {rating}</h1>
+          <h1 className="show-card-info-tiny">Reviews: {totalReviews}</h1>
+          <h1 className="show-card-info-tiny">Price: $ {Math.round(beforePrice)}</h1>
+          <h1 className="show-card-info-tiny">Sale: {Math.round(savingsPercent)} %</h1>
+          <h1 className="show-card-info-tiny">Sale Price: $ {Math.round(currentPrice)}</h1>
         </div>
 
-        <div className="show-card-price-container">
+        {/* <div className="show-card-price-container">
           <button className="show-card-price">
             Current Price: {currentPrice}
           </button>
@@ -49,7 +52,7 @@ const ShowPage = (props) => {
           <button className="show-card-price">
             Discounted: {savingsPercent}%
           </button>
-        </div>
+        </div> */}
 
         <div className="show-card-url-container">
           <button

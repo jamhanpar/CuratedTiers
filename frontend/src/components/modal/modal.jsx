@@ -20,7 +20,7 @@ function Modal({modal, closeModal}) {
   switch (modal[0]) {
     case "index_item":
       component = <ShowPage pdt={modal[1]}/>;
-      width = `1220px`;
+      width = `1197px`;
       height = `640px`;
       break;
     case "login":
