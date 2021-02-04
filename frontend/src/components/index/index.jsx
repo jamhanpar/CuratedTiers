@@ -74,8 +74,7 @@ class IndexPage extends React.Component {
         } else {
           highTier.push(pdt)
         }
-        count += 1; 
-    
+        count += 1;
       })
   
        
@@ -83,17 +82,13 @@ class IndexPage extends React.Component {
         return b[2] - a[2];
       });
 
-  ;
       midTier.sort(function (a, b) {
         return b[2] - a[2];
       });
 
-  ;
       highTier.sort(function (a, b) {
         return b[2] - a[2];
       });
-
-  ;
 
 
       const lowTierList = lowTier.map( (pdt, i) => {
