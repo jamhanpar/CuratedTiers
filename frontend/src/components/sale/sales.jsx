@@ -12,9 +12,9 @@ class SalesPage extends React.Component {
   }
 
   componentDidMount() {
-    const searchTerm = localStorage.searchTerm;
+    // const searchTerm = localStorage.searchTerm;
 
-    this.props.fetchProducts(searchTerm);
+    this.props.fetchProducts("deals");
   }
 
   render() {
@@ -27,32 +27,26 @@ class SalesPage extends React.Component {
     } else {
       return (
         <section className="content-container">
-          <div className="homepage-filter">
-            <ul className="filter-options-list">
-              <li>Trending</li>
-              <li>New</li>
-              <li>Most popular</li>
-            </ul>
-          </div>
           <div className="product-list-container">
-            <div className="product-card">
-              <div className="product-card-price-container">
-                <button className="product-card-price">$300</button>
-              </div>
-              <div className="product-card-img-container">
-                <img
-                  className="product-card-img"
-                  src="https://res.cloudinary.com/hcu8jcnmr/image/upload/c_fit,w_600,h_600/swedradzazzc0ilphx2l.jpg"
-                  alt="product-img"
-                />
-              </div>
-              <div className="product-card-info-container">
-                <h1 className="product-card-info">
-                  H7 Wireless Over-Ear Headphones, Natural
-                </h1>
-                <p className="product-card-info">by B{"&"}O PLAY</p>
-              </div>
-            </div>
+            {
+              this.props.products.map(product => {
+                <div className={`product-card`}>
+                  <div className="product-card-price-container">
+                    <button className="product-card-price">
+                      {product.current_price}
+                    </button>
+                  </div>
+                  <div className="product-card-img-container">
+                    <img className="product-card-img" src={product.thumbnail} alt="" />
+                  </div>
+                  <div className="product-card-info-container">
+                    <h1 className="product-card-info">{product.title}</h1>
+                    <h1 className="product-card-info">{product.rating}</h1>
+                  </div>
+                  <LikedContainer props={product} />
+                </div>;
+              })
+            }
           </div>
         </section>
       )
