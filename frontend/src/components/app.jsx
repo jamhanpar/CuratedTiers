@@ -18,13 +18,13 @@ const App = () => (
     <NavBarContainer />
     <Switch>
       <Route exact path="/" component={HomePage} />
-      <AuthRoute exact path="/sales" component={SalesPageContainer} />
-      <AuthRoute exact path="/featured" component={FeaturedPageContainer} />
-      <ProtectedRoute exact path="/user/:user_id" component={UserProfileContainer} />
+      <Route path="/index" component={IndexPageContainer} />
+      <AuthRoute exact path="/deals" component={SalesPageContainer} />
+      <AuthRoute exact path="/surpriseme" component={FeaturedPageContainer} />
+      <AuthRoute exact path="/user/:user_id" component={UserProfileContainer} />
       {/* <AuthRoute exact path="/login" component={LoginFormContainer} />
       <AuthRoute exact path="/signup" component={SignupFormContainer} /> */}
 
-      <Route path="/index" component={IndexPageContainer} />
 
     </Switch>
   </div>

@@ -19,8 +19,9 @@
     flex-direction: row;
 }
 
-.filter-options-list>li {
-    font-size     : 18px;
+.filter-title-option {
+    font-size     : 15px;
+    color: grey;
     display       : flex;
     flex-direction: row;
     padding-right : 25px;
@@ -95,12 +96,14 @@
 .product-card-info-container {
     display       : flex;
     flex-direction: column;
-    align-items   : right;
     padding       : 10px 20px;
 }
 
 .product-card-info {
-    font-size  : 15px;
+    width: 100%;
+    height: 75px;
+    font-size  : 13px;
+    line-height: 25px;
     color      : #afafaf;
-    padding-top: 10px;
+    padding-top: 5px;
 }

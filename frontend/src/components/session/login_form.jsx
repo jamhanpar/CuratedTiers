@@ -108,11 +108,11 @@ class LoginForm extends React.Component {
             />
           </div>
 
-          <div className="forgot-password-container">
+          {/* <div className="forgot-password-container">
             <a className="forgot-password-link" href="#">
               Forgot your username or password?
             </a>
-          </div>
+          </div> */}
 
           {this.props.errors.length ? "" : this.renderErrors()}
 

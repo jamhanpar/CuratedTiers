@@ -41,8 +41,8 @@ class Like extends React.Component {
     const likedStatus = this.state.liked ? "liked" : "unliked";
     
     return (
-      <div>
-        <button className="heart-container" onClick={handleClick}>
+      <div className="heart-container">
+        <button className="heart-btn-container" onClick={handleClick}>
           <FaHeart className={likedStatus} />
         </button>
       </div>

@@ -1,12 +1,13 @@
 import React from "react";
 import { withRouter } from "react-router-dom";
+import './search.css';
 
 class Search extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      searchTerm: "headphones",
+      searchTerm: "",
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -30,17 +31,15 @@ class Search extends React.Component {
 
   render() {
     return (
-      <div>
-        <form onSubmit={this.handleSubmit}>
-          <div>
-            <input
-              type="text"
-              value={this.state.searchTerm}
-              onChange={this.update("searchTerm")}
-              placeholder="Search"
-            />
-            <input type="submit" value="Submit" />
-          </div>
+      <div className="search-bar-container">
+        <form className="search-input-form" onSubmit={this.handleSubmit}>
+          <input
+            type="text"
+            className={this.props.searchClass}
+            value={this.state.searchTerm}
+            onChange={this.update("searchTerm")}
+            placeholder="Search"
+          />
         </form>
       </div>
     );

@@ -21,36 +21,49 @@ const ShowPage = (props) => {
 // debugger
 
   return (
-    <div className='show-card'>
-
-      <div className='show-card-left'>
+    <div className="show-card">
+      <div className="show-card-left">
         <div className="show-card-img-container">
-            <img className="show-card-img" src={thumbnail} alt=""/>
+          <img className="show-card-img" src={thumbnail} alt="" />
         </div>
-        <LikedContainer
-            props={props.pdt.pdtObj}
-        />
+        <div className="show-liked-container">
+          <LikedContainer props={props.pdt.pdtObj} />
+          <p className="like-text">LIKE</p>
+        </div>
       </div>
 
-      <div className='show-card-right'>
-        <div className="show-card-price-container">
-            <button className="show-card-price">{currentPrice}</button>
-            <button className="show-card-price">{beforePrice}</button>
-            <button className="show-card-price">{savingsPercent}</button>
-        </div>
-        
+      <div className="show-card-right">
         <div className="show-card-info-container">
-            <h1 className="show-card-info">{title}</h1>
-            <h1 className="show-card-info">{rating}</h1>
-            <h1 className="show-card-info">{totalReviews}</h1>
+          <h1 className="show-card-info">{title}</h1>
+          <h1 className="show-card-info">{rating}</h1>
+          <h1 className="show-card-info">{totalReviews}</h1>
         </div>
-        
-        <div className='show-card-url'>
-          <a href={`${url}`} target="_blank" rel="noopener noreferrer">{currentPrice} on Amazon</a>
+
+        <div className="show-card-price-container">
+          <button className="show-card-price">
+            Current Price: {currentPrice}
+          </button>
+          <button className="show-card-price">
+            Original Price: {beforePrice}
+          </button>
+          <button className="show-card-price">
+            Discounted: {savingsPercent}%
+          </button>
+        </div>
+
+        <div className="show-card-url-container">
+          <button
+            className="show-card-url-btn"
+            href={`${url}`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            ${Math.round(currentPrice)} on Amazon
+          </button>
         </div>
       </div>
     </div>
-  )
+  );
 }
 
 

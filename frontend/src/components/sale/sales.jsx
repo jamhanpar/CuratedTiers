@@ -5,9 +5,9 @@ import ShoppingLoadIcon from "../../img/Shopping-1.5s-200px.gif";
 import "../index/index.css";
 
 class SalesPage extends React.Component {
-  constructor(props) {
-    super(props);
-  }
+  // constructor(props) {
+  //   super(props);
+  // }
 
   componentWillUnmount() {
     this.props.resetProducts();
@@ -18,7 +18,7 @@ class SalesPage extends React.Component {
 
     // const searchTerm = localStorage.searchTerm;
 
-    this.props.fetchProducts("Today's Deals");
+    this.props.fetchProducts("Deals -clothing");
   }
 
   render() {

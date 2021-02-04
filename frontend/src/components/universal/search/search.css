@@ -1,0 +1,27 @@
+.home-search-container {
+    width          : 1000px;
+    height         : 1000px;
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+}
+
+.search-input-form {
+    width: auto;
+    height: auto;
+}
+
+.home-search-bar {
+    outline: none;
+    border: none;
+    border-radius: 50px;
+    background: white;
+    width     : 1000px;
+    height    : auto;
+    font-size : 150px;
+    padding-left: 40px;
+}
+
+.home-search-bar::placeholder {
+    color: #afafaf;
+}
