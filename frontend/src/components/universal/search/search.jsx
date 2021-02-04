@@ -6,7 +6,7 @@ class Search extends React.Component {
     super(props);
 
     this.state = {
-      searchTerm: "headphones",
+      searchTerm: "",
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -30,18 +30,16 @@ class Search extends React.Component {
 
   render() {
     return (
-      <div>
-        <form onSubmit={this.handleSubmit}>
-          <div>
-            <input
-              type="text"
-              value={this.state.searchTerm}
-              onChange={this.update("searchTerm")}
-              placeholder="Search"
-            />
-            <input type="submit" value="Submit" />
-          </div>
-        </form>
+      <div className="search-bar-container">
+        <input
+          type="text"
+          className="search-bar"
+          value={this.state.searchTerm}
+          onChange={this.update("searchTerm")}
+          // onKeyDown={(e) => this.handleSubmit(e)}
+          placeholder="Search"
+        />
+        <button type="submit" onClick={this.handleSubmit}>Submit</button>
       </div>
     );
   }
