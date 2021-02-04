@@ -44,8 +44,8 @@ export const createLikedProduct = data => dispatch => (
     err => dispatch(receiveErrors(err)))
 );
 
-export const deleteLikedProduct = (likedProductId) => dispatch => (
-  destroyLikedProduct(likedProductId)
+export const deleteLikedProduct = (productId) => dispatch => (
+  destroyLikedProduct(productId)
     .then( res => dispatch(removeLikedProduct(res.data)),
     err => dispatch(receiveErrors(err)))
 );
