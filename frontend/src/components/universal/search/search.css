@@ -18,7 +18,8 @@
     background   : white;
     width        : 1000px;
     height       : auto;
-    font-size    : 150px;
+    font-size    : 125px;
+    line-height  : 175px;
     padding-left : 40px;
 }
 
