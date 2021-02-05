@@ -38,7 +38,7 @@ class Search extends React.Component {
             className={this.props.searchClass}
             value={this.state.searchTerm}
             onChange={this.update("searchTerm")}
-            placeholder="Search me baby"
+            placeholder="Search"
           />
         </form>
       </div>
