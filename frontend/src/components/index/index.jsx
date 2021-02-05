@@ -4,6 +4,8 @@ import PdtIndexItem from "./pdt_index_item";
 import ShoppingLoadIcon from "../../img/Shopping-1.5s-200px.gif";
 import './index.css';
 
+import RenderLineChart from '../chart/chart'
+
 class IndexPage extends React.Component {
   constructor(props) {
     super(props);
@@ -63,6 +65,10 @@ class IndexPage extends React.Component {
         } 
       })
 
+      // const chartData = [{name: '', uv: 400}, {name: '', uv: 300}];
+
+      
+
       priceArr_2.forEach( (product) => {
         
         const titleArr = product[9].split(' ')
@@ -85,6 +91,8 @@ class IndexPage extends React.Component {
       priceArr_2.sort(function(a,b) {
         return a[1] - b[1];
       })
+
+      
 
       const numItems = priceArr_2.length;
       const numTier = numItems / 3;
@@ -135,9 +143,26 @@ class IndexPage extends React.Component {
             )
       })
 
+      // chart data info start
+      const chartData = [];
+      priceArr_2.forEach( (product) => {
+
+        let chartDataItem = {name: product[9], price: product[1] }
+        chartData.push(chartDataItem) 
+      });
+      // chart data info end
+
+
+      
+      // const loweest
+
       return (
         <section className="content-container">
+
           <div className="index-page">
+
+            <RenderLineChart data={chartData}/> 
+
             <div className="tier-title-list">
               <h1 className="tier-title">Value</h1>
               <h1 className="tier-title">Mid Tier</h1>
