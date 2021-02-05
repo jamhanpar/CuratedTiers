@@ -6,7 +6,7 @@ import { openModal } from '../../actions/modal_actions'
 
 const mapStateToProps = (state) => {
   const likedProductsObject = {};
-  if (Object.keys(state.likedProducts).length > 0) {
+  if (Object.keys(state.likedProducts).length > 0 && ("list" in state.likedProducts)) {
     state.likedProducts.list.map( product => {
       likedProductsObject[product.asin] = product
     })

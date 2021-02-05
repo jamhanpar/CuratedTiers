@@ -15,7 +15,7 @@ class Like extends React.Component {
   handleClick(e) {
     e.preventDefault();
     const product = this.props.product;
-    if (this.state.liked === false) {
+    if (this.state.liked === false && this.props.userId) {
       this.props.createLikedProduct({
         user: this.props.userId,
         asin: product.asin,
@@ -30,10 +30,12 @@ class Like extends React.Component {
         title: product.title,
         url: product.url
       }).then(() => this.setState({liked: true}))
-    } else {
+    } else if (this.state.liked === true && this.props.userId) {
       this.props.deleteLikedProduct(this.props.productList[this.props.product.asin]).then(
         () => this.setState({liked: false})
       )
+    } else {
+      this.props.openModal({modal: "login"})
     }
   }
 
