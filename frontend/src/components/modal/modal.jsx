@@ -34,6 +34,8 @@ function Modal({modal, closeModal}) {
     default:
       return null;
   }
+
+
   return (
     <div className="modal-container" onClick={closeModal}>
       <div

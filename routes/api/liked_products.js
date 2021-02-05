@@ -53,7 +53,7 @@ router.patch('/:id', passport.authenticate('jwt', { session: false}), (req, res)
 });
 
 router.delete('/:id', passport.authenticate('jwt', { session: false }), (req, res) => {
-  LikedProduct.findOneAndDelete(req.params.id)
+  LikedProduct.findOneAndDelete({_id: req.params.id})
     .then( deletedProduct => res.send(deletedProduct))
     .catch( err => res.status(500).json({ nolikedproductfound: "No product found!"}))
 });
