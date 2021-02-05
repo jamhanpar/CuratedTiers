@@ -21,12 +21,12 @@ class Search extends React.Component {
   }
 
   handleSubmit(e) {
+    debugger
     e.preventDefault();
-    this.props.history.push({
-      pathname: "/index",
-      searchTerm: this.state.searchTerm,
-    });
-    localStorage.setItem("searchTerm", this.state.searchTerm)
+      this.props.history.push({
+        pathname: "/redirect"
+      });
+      localStorage.setItem("searchTerm", this.state.searchTerm)
   }
 
   render() {
