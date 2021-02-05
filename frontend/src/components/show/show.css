@@ -96,6 +96,10 @@ margin-bottom: 15px;
 }
 
 .show-card-url-btn {
+  display         : flex;
+  align-items     : center;
+  justify-content : center;
+  text-decoration : none;
   border          : none;
   border-radius   : 4px;
   background-color: #22DEBE;

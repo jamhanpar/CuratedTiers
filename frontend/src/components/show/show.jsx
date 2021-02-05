@@ -54,14 +54,14 @@ const ShowPage = (props) => {
         </div> */}
 
         <div className="show-card-url-container">
-          <button
+          <a
             className="show-card-url-btn"
             href={`${url}`}
             target="_blank"
             rel="noopener noreferrer"
           >
             ${Math.round(currentPrice)} on Amazon
-          </button>
+          </a>
         </div>
       </div>
     </div>
