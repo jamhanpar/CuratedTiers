@@ -3,7 +3,7 @@
     display        : flex;
     justify-content: flex-end;
     align-items    : center;
-    z-index        : 100;
+    z-index        : 1;
 }
 
 .heart-btn-container {

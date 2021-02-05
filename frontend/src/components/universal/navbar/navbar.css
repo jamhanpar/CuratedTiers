@@ -16,6 +16,7 @@
     height         : 68px;
     display        : flex;
     justify-content: center;
+    z-index        : 100;
 }
 
 .main-nav-components-container {

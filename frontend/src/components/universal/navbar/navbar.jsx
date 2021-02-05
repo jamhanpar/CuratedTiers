@@ -4,7 +4,7 @@ import "./navbar.css";
 import "../../stylesheets/reset.css";
 import { FaHome, FaTag, FaStar, FaSearch, FaUserAstronaut, FaSmile, FaDice, FaCubes } from "react-icons/fa";
 import Search from "../search/search";
-
+// import { useHistory } from 'react-router-dom';
 import wordLogo from "../../../img/word-logo.png"
 
 
@@ -18,7 +18,11 @@ class NavBar extends React.Component {
 
   logoutUser(e) {
     e.preventDefault();
+    debugger
+    // const history = useHistory();
+
     this.props.logout();
+    this.props.history.push('/');
   }
 
   // Render session options based on whether user is logged in
