@@ -21,7 +21,6 @@ router.get('/products/:category', async (req, res) => {
   };
   options.params.keyword = category;
   // console.log(options)
-  // debugger
   await axios.request(options)
     .then( response => res.send(response.data.products))
     .catch( err => res.status(500).json({ noproductfound: "No products found!"}))

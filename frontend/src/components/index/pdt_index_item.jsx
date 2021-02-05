@@ -33,7 +33,6 @@ const PdtIndexItem = (props) => {
         }
     })
 
-// debugger 
   
   // const asin = props.pdt[0]
   // const score = props.pdt[2]

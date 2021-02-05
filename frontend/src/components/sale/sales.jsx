@@ -119,7 +119,6 @@ class SalesPage extends React.Component {
 
       const lowTierList = lowTier.map((pdt, i) => {
         return (
-          //  debugger;
           <PdtIndexItem
             key={`${i}`}
             pdt={pdt}
@@ -130,7 +129,6 @@ class SalesPage extends React.Component {
       });
       const midTierList = midTier.map((pdt, i) => {
         return (
-          //  debugger;
           <PdtIndexItem
             key={`${i}`}
             pdt={pdt}
@@ -141,7 +139,6 @@ class SalesPage extends React.Component {
       });
       const highTierList = highTier.map((pdt, i) => {
         return (
-          //  debugger;
           <PdtIndexItem
             key={`${i}`}
             pdt={pdt}
@@ -151,7 +148,6 @@ class SalesPage extends React.Component {
         );
       });
 
-      // debugger
       return (
         <section className="content-container">
           <div className="index-page">
