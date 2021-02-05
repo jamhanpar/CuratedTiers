@@ -3,6 +3,8 @@ import '../stylesheets/content.css';
 import '../stylesheets/reset.css';
 import PdtIndexItem from "../index/pdt_index_item";
 import ShoppingLoadIcon from "../../img/Shopping-1.5s-200px.gif"
+import avatar from '../../img/Avatar.png'
+import './user_profile.css'
 
 class UserProfile extends React.Component {
   
@@ -22,12 +24,14 @@ class UserProfile extends React.Component {
     } else {
       const likedProducts = Object.values(this.props.likedProducts)
       return (
-
-        <section className="content-container">
+        <div className="user-profile-container">
           <div className="user-profile-wrapper">
-            <img></img>
+            <img className='avatar' src={avatar}></img>
             <h1 className="user-handle">{this.props.currentUsername}</h1>
+            <h1 className="user-liked-products">@demo is currently </h1>
+            <h1 className="user-like-count">following {likedProducts.length} items </h1>
           </div>
+        <section className="content-container">
           <div className="homepage-filter"></div>
           <div className="product-list-container">
             {likedProducts.map((likedProduct, i) => {
@@ -51,6 +55,7 @@ class UserProfile extends React.Component {
             })}
           </div>
         </section>
+      </div>
       );
     }    
   }
