@@ -3,6 +3,8 @@ import { withRouter} from 'react-router-dom';
 import Like from './like';
 import { createLikedProduct, deleteLikedProduct } from '../../../actions/like_actions';
 
+// productId: state.likedProducts.likedProducts[ownProps.props.asin]
+
 const msp = (state, ownProps) => {
   const productListObject = {};
   if (Object.keys(state.likedProducts).length > 0) {

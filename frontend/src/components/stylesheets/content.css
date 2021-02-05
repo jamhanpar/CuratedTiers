@@ -88,23 +88,26 @@
 }
 
 .product-card-img {
+    /* border: 1px solid black; */
     width     : 50%;
     height    : auto;
     overflow  : hidden;
     object-fit: contain;
+    margin-top: 5px;
 }
 
 .product-card-info-container {
+    /* border: 1px solid black; */
     display       : flex;
     flex-direction: column;
-    padding       : 10px 20px;
+    padding       : 21px 20px;
 }
 
 .product-card-info {
+    /* border: 1px solid black; */
     width: 100%;
-    height: 75px;
+    height: 60px;
     font-size  : 13px;
     line-height: 25px;
     color      : #afafaf;
-    padding-top: 5px;
 }
