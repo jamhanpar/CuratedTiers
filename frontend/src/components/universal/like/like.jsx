@@ -6,7 +6,7 @@ class Like extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      liked: (this.props.productId ? true : false)
+      liked: (this.props.productList[this.props.product.asin] ? true : false)
     };
 
     this.handleClick = this.handleClick.bind(this);
@@ -31,7 +31,7 @@ class Like extends React.Component {
         url: product.url
       }).then(() => this.setState({liked: true}))
     } else {
-      this.props.deleteLikedProduct(this.props.productId.id).then(
+      this.props.deleteLikedProduct(this.props.productList[this.props.product.asin]).then(
         () => this.setState({liked: false})
       )
     }

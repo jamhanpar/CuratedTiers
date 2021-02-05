@@ -16,9 +16,9 @@ export const receiveLikedProduct = likedProduct => ({
   likedProduct 
 });
 
-export const removeLikedProduct = likedProductId => ({
+export const removeLikedProduct = deletedProduct => ({
   type: REMOVE_LIKED_PRODUCT,
-  likedProductId
+  deletedProduct
 });
 
 export const receiveErrors = errors => ({
@@ -38,11 +38,11 @@ export const fetchLikedProduct = (likedProductId) => dispatch => (
     err => dispatch(receiveErrors(err)))
 );
 
-export const createLikedProduct = data => dispatch => (
-  addLikedProduct(data)
-    .then(res => dispatch(receiveLikedProduct(res.data)),
-    err => dispatch(receiveErrors(err)))
-);
+export const createLikedProduct = data => dispatch => {
+  return addLikedProduct(data)
+  .then(res => dispatch(receiveLikedProduct(res.data)),
+  err => dispatch(receiveErrors(err)))
+};
 
 export const deleteLikedProduct = (productId) => dispatch => (
   destroyLikedProduct(productId)

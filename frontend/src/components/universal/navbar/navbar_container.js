@@ -5,10 +5,15 @@ import NavBar from "./navbar";
 
 import {openModal} from "../../../actions/modal_actions"
 
-const mapStateToProps = (state) => ({
-  loggedIn: state.session.isAuthenticated,
-  userId: state.session.user.id
-});
+const mapStateToProps = (state) => {
+  const userId = state.session.user ? state.session.user.id : ""
+
+
+  return {
+    loggedIn: state.session.isAuthenticated,
+    userId: userId
+  }
+};
 
 const mapDispatchToProps = (dispatch) => ({
   logout: () => dispatch(logout()),

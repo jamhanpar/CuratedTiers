@@ -5,12 +5,11 @@ import "../../stylesheets/reset.css";
 import { FaHome, FaTag, FaStar, FaSearch } from "react-icons/fa";
 import Search from "../search/search";
 
-import Search from "../search/search_container";
-
 
 class NavBar extends React.Component {
   constructor(props) {
     super(props);
+    
     this.logoutUser = this.logoutUser.bind(this);
     this.getSessionLinks = this.getSessionLinks.bind(this);
   }

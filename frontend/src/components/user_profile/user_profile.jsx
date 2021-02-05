@@ -12,10 +12,11 @@ class UserProfile extends React.Component {
   }
   
   render() {
-    if (!this.props.likedProducts) {
+    if (Object.keys(this.props.likedProducts).length < 1) {
       return (
         <div className="loading-gif">
-          <img src={ShoppingLoadIcon} alt="Loading..." className="shopping-gif"/>
+          <h1>Your collection is empty!</h1>
+          {/* <img src={ShoppingLoadIcon} alt="Loading..." className="shopping-gif"/> */}
         </div>
       )
     } else {
