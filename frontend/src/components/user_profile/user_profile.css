@@ -32,3 +32,9 @@
     color:#ADADAD;
     font-weight: bolder;
 }
+
+.empty-collection {
+    text-align: center;
+    margin: 50px;
+    font-size: 30px;
+}

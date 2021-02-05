@@ -49,25 +49,27 @@ class FeaturedPage extends React.Component {
       "Fun home items",
       "Under $10",
       "Handmade",
-      "Amazon Devices",
+      // "Amazon Devices",
       "Smart Home",
       "Pet Supplies",
-      "Furniture",
-      "Robotime",
-      "Kaws",
-      "Lego",
-      "Fun",
-      "Workspace",
+      // "Furniture",
+      // "Robotime",
+      // "Kaws",
+      // "Lego",
+      // "Fun",
+      // "Workspace",
       "Modern Planters",
-      "Travel",
+      // "Travel",
       "Pop culture",
       "Snacks",
-      "Kitchen",
-      "Nintendo Switch",
-      "DIY Kits for Adults",
+      "Kitchen"
+      // "Nintendo Switch",
+      // "DIY Kits for Adults",
     ];
 
-    return search_options[Math.floor(Math.random() * search_options.length)];
+    let searchRes = search_options[Math.floor(Math.random() * search_options.length)];
+    return searchRes === this.randomSearch ? search_options[Math.floor(Math.random() * search_options.length)] : searchRes
+    // return search_options[Math.floor(Math.random() * search_options.length)];
   };
 
   handleSubmit(e) {

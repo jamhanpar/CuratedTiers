@@ -16,7 +16,7 @@ class UserProfile extends React.Component {
   render() {
     if (Object.keys(this.props.likedProducts).length < 1) {
       return (
-        <div className="loading-gif">
+        <div className="empty-collection">
           <h1>Your collection is empty!</h1>
           {/* <img src={ShoppingLoadIcon} alt="Loading..." className="shopping-gif"/> */}
         </div>
