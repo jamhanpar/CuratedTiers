@@ -5,9 +5,12 @@ import ShoppingLoadIcon from "../../img/Shopping-1.5s-200px.gif";
 import './index.css';
 
 class IndexPage extends React.Component {
-  // constructor(props) {
-  //   super(props);
-  // }
+  constructor(props) {
+    super(props);
+    this.state = {
+      searchTerm: localStorage.searchTerm
+    }
+  }
 
   componentWillUnmount() {
     this.props.resetProducts();
@@ -17,9 +20,9 @@ class IndexPage extends React.Component {
 
     // const { searchTerm } = this.props.location;
 
-    const searchTerm = localStorage.searchTerm;
+    // const searchTerm = localStorage.searchTerm;
  
-    this.props.fetchProducts(searchTerm);
+    this.props.fetchProducts(this.state.searchTerm);
   }
 
   render() {
