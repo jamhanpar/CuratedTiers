@@ -3,6 +3,7 @@ import { withRouter } from "react-router";
 import PdtIndexItem from "./pdt_index_item";
 import ShoppingLoadIcon from "../../img/Shopping-1.5s-200px.gif";
 import './index.css';
+import '../chart/chart.css'
 
 import RenderLineChart from '../chart/chart'
 
@@ -161,7 +162,7 @@ class IndexPage extends React.Component {
 
           <div className="index-page">
 
-            <RenderLineChart data={chartData}/> 
+            <RenderLineChart data={chartData} chartContainerClass="comparison-chart"/> 
 
             <div className="tier-title-list">
               <h1 className="tier-title">Value</h1>
