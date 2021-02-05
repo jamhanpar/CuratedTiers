@@ -1,4 +1,6 @@
-
+.user-profile-container {
+    width: 100%;
+}
 .avatar {
     height: 90px;
     width: 90px;
@@ -7,7 +9,7 @@
 
 .user-profile-wrapper {
     height: 235px;
-    width: 1200px;
+    width: 100%;
     background-color: #FFFFFF;
     display: flex;
     flex-direction: column;
