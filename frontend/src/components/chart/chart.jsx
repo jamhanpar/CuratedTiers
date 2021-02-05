@@ -12,8 +12,7 @@ const RenderLineChart = (props) => {
     <XAxis dataKey="name" tick={false}/>
     <YAxis />
     <Tooltip />
-    {/* <ReferenceLine y={props.lowMid} label="low-to-mid" stroke="red" strokeDasharray="3 3" />
-    <ReferenceLine y={props.midHigh} label="mid-to-high" stroke="red" strokeDasharray="3 3" /> */}
+    
   </LineChart>
   )
 };
