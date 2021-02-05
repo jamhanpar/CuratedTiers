@@ -18,7 +18,6 @@ const ShowPage = (props) => {
   const thumbnail = props.pdt.pdt[8]
 
   // const pdt = props.pdt.pdt
-// debugger
 
   return (
     <div className="show-card">
