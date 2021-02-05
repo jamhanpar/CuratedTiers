@@ -33,12 +33,12 @@ const ShowPage = (props) => {
           <h1 className="show-card-info-tiny">Reviews: {totalReviews}</h1>
           {beforePrice !== 0 ? (
             <h1 className="show-card-info-tiny">
-              `Price: $${Math.round(beforePrice)}`
+              Price: ${Math.round(beforePrice)}
             </h1>
           ) : null}
           {savingsPercent !== 0 ? (
             <h1 className="show-card-info-tiny">
-              `Sale: ${Math.round(savingsPercent)}%`
+              Sale: {Math.round(savingsPercent)}%
             </h1>
           ) : null}
           <h1 className="show-card-info-tiny">
