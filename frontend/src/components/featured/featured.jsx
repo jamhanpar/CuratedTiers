@@ -113,7 +113,8 @@ class FeaturedPage extends React.Component {
 
       priceArr.forEach( (product) => {
         const test = product[9].slice(0,9)
-        if (test !== 'Sponsored') {
+        const test2 = product[1]
+        if (test !== 'Sponsored' && test2 > 0 ) {
           priceArr_2.push(product);
         } 
       })
