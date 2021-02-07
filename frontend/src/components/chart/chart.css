@@ -1,3 +1,8 @@
+.comparison-chart {
+  /* border: 1px solid black; */
+  margin-top: 20px;
+}
+
 .chart-line {
   margin-top: 20px;
 }

@@ -36,3 +36,8 @@
     color     : lightgrey;
     transition: ease 1s;
 }
+
+.heartSize {
+    width: 30px;
+    height: 30px;
+}

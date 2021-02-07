@@ -1,9 +1,11 @@
 .home-search-container {
+    /* border: 1px solid black; */
     width          : 1000px;
     height         : 1000px;
     display        : flex;
     justify-content: center;
-    align-items    : center;
+    align-items    : top;
+    margin-top: 250px;
 }
 
 .search-input-form {
@@ -20,7 +22,7 @@
     height       : auto;
     font-size    : 125px;
     line-height  : 175px;
-    padding-left : 40px;
+    padding: 0 50px;
 }
 
 .home-search-bar::placeholder {

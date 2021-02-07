@@ -99,7 +99,8 @@
 }
 
 .search-bar {
-    border: none;
+    width: 90%;
+    border: 1px solid black;
     background: #F3F3F3;
     font-size: 13px;
 }

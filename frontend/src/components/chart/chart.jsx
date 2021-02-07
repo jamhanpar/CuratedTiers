@@ -6,15 +6,21 @@ import './chart'
 
 const RenderLineChart = (props) => {
   return (
-  <LineChart width={800} height={200} data={props.data} className='chart-line'>
-    <Line type="monotone" dataKey="price" stroke="#8884d8"  />
-    {/* <CartesianGrid stroke="#ccc" /> */}
-    <XAxis dataKey="name" tick={false}/>
-    <YAxis />
-    <Tooltip />
-    
-  </LineChart>
-  )
+    <div className={props.chartContainerClass}>
+      <LineChart
+        width={1200}
+        height={200}
+        data={props.data}
+        className="chart-line"
+      >
+        <Line type="monotone" dataKey="price" stroke="#22DEBE" />
+        {/* <CartesianGrid stroke="#ccc" /> */}
+        <XAxis dataKey="name" tick={false} />
+        <YAxis />
+        <Tooltip />
+      </LineChart>
+    </div>
+  );
 };
 
 export default RenderLineChart;

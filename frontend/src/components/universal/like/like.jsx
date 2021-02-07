@@ -45,7 +45,7 @@ class Like extends React.Component {
     return (
       <div className="heart-container">
         <button className="heart-btn-container" onClick={this.handleClick}>
-          <FaHeart className={likedStatus} />
+          <FaHeart className={`${likedStatus} ${this.props.heartSize}`} />
         </button>
       </div>
     );
