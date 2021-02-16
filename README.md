@@ -1,5 +1,5 @@
 # Curated Tiers
----
+
 ## Background and overview
 
 [Live site](https://curated-tiers.herokuapp.com/#/)
