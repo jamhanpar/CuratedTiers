@@ -1,5 +1,5 @@
 # Curated Tiers
----
+
 ## Background and overview
 
 [Live site](https://curated-tiers.herokuapp.com/#/)
@@ -10,7 +10,7 @@ We have also made shopping fun with the SurpriseMe tab that allows you to search
 
 Best of all, we have the Deals tab that scans Amazon for the best deals of the day and presents the results ordered by ratings--perfect for all you bargain hunters out there.
 
-![link to gif](https://www,google.com)
+![link to gif](https://github.com/jamhanpar/curatedtiers/blob/main/frontend/public/curated_tiers_gif.gif)
 
 - App ideals and goals: 
   - Users are able to search for any product on Amazon with our search bar
@@ -21,6 +21,10 @@ Best of all, we have the Deals tab that scans Amazon for the best deals of the d
 - CuratedTiers is primarily built with the MERN stack, a combination of the following four technologies: MongoDB, Express, React, and Node
 - Additional techonlogies used: JavaScript, HTML, CSS 
 - Utilized Rapid API and Amazon API to pull product search results
+
+## Sample Pages
+<img width="476px" height="350px" src="https://github.com/jamhanpar/curatedtiers/blob/main/frontend/public/ss-surprise-me.png">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img width="476px" height="350px" src="https://github.com/jamhanpar/curatedtiers/blob/main/frontend/public/ss-show-page.png">
+<img width="476px" height="350px" src="https://github.com/jamhanpar/curatedtiers/blob/main/frontend/public/ss-log-in-modal.png">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img width="476px" height="350px" src="https://github.com/jamhanpar/curatedtiers/blob/main/frontend/public/ss-collections-page.png">
 
 ## Bonus features 
 - Random category generator results page
