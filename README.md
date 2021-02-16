@@ -23,10 +23,10 @@ Best of all, we have the Deals tab that scans Amazon for the best deals of the d
 - Utilized Rapid API and Amazon API to pull product search results
 
 ## Sample Pages
-![surprise-me]()
-![show]()
-![login-modal]()
-![collections]()
+![surprise-me](https://github.com/jamhanpar/curatedtiers/blob/main/frontend/public/ss-surprise-me.png)
+![show](https://github.com/jamhanpar/curatedtiers/blob/main/frontend/public/ss-show-page.png)
+![login-modal](https://github.com/jamhanpar/curatedtiers/blob/main/frontend/public/ss-log-in-modal.png)
+![collections](https://github.com/jamhanpar/curatedtiers/blob/main/frontend/public/ss-collections-page.png)
 
 ## Bonus features 
 - Random category generator results page
