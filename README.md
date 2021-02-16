@@ -10,7 +10,7 @@ We have also made shopping fun with the SurpriseMe tab that allows you to search
 
 Best of all, we have the Deals tab that scans Amazon for the best deals of the day and presents the results ordered by ratings--perfect for all you bargain hunters out there.
 
-![link to gif](https://www,google.com)
+![link to gif](https://github.com/jamhanpar/curatedtiers/blob/main/frontend/public/curated_tiers_gif.gif)
 
 - App ideals and goals: 
   - Users are able to search for any product on Amazon with our search bar
