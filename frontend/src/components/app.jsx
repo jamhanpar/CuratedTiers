@@ -10,6 +10,7 @@ import Redirect from "./universal/redirect/redirect";
 import Modal from "./modal/modal";
 import IndexPageContainer from "./index/index_container"
 import './app.css';
+import AboutPage from './about/about_page'
 
 const App = () => (
   <div className="app-container">
@@ -21,6 +22,9 @@ const App = () => (
       <Route path="/redirect" component={Redirect} />
       <Route exact path="/deals" component={SalesPageContainer} />
       <Route exact path="/surpriseme" component={FeaturedPageContainer} />
+      
+      <Route exact path="/about" component={AboutPage} />
+
       <ProtectedRoute exact path="/user/:user_id" component={UserProfileContainer} />
     </Switch>
   </div>

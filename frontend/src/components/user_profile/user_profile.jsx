@@ -28,7 +28,7 @@ class UserProfile extends React.Component {
           <div className="user-profile-wrapper">
             <img className='avatar' src={avatar}></img>
             <h1 className="user-handle">{this.props.currentUsername}</h1>
-            <h1 className="user-liked-products">@demo is currently </h1>
+            <h1 className="user-liked-products">@{this.props.currentUsername} is currently </h1>
             <h1 className="user-like-count">following {likedProducts.length} items </h1>
           </div>
         <section className="content-container">
