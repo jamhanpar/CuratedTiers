@@ -25,8 +25,6 @@ Best of all, we have the Deals tab that scans Amazon for the best deals of the d
 ## Sample Pages
 <img width="476px" height="350px" src="https://github.com/jamhanpar/curatedtiers/blob/main/frontend/public/ss-surprise-me.png">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img width="476px" height="350px" src="https://github.com/jamhanpar/curatedtiers/blob/main/frontend/public/ss-show-page.png">
 <img width="476px" height="350px" src="https://github.com/jamhanpar/curatedtiers/blob/main/frontend/public/ss-log-in-modal.png">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img width="476px" height="350px" src="https://github.com/jamhanpar/curatedtiers/blob/main/frontend/public/ss-collections-page.png">
-![login-modal](https://github.com/jamhanpar/curatedtiers/blob/main/frontend/public/ss-log-in-modal.png)
-![collections](https://github.com/jamhanpar/curatedtiers/blob/main/frontend/public/ss-collections-page.png)
 
 ## Bonus features 
 - Random category generator results page
