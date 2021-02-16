@@ -60,7 +60,7 @@ class AboutPage extends React.Component {
                     <a href="https://github.com/Junghyun2006" target="_blank" rel="noopener noreferrer">
                       <FaGithub className="github-icon" size={27} />
                     </a>
-                    <a href="https://github.com/Junghyun2006" target="_blank" rel="noopener noreferrer">
+                    <a href="https://angel.co/u/jung-park-14" target="_blank" rel="noopener noreferrer">
                       <FaAngellist className="github-icon" size={27} />
                     </a>
                     </div>
