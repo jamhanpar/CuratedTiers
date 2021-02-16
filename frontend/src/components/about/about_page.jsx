@@ -32,7 +32,7 @@ class AboutPage extends React.Component {
                     <a href="https://github.com/jamhanpar" target="_blank" rel="noopener noreferrer">
                       <FaGithub className="github-icon" size={27} />
                     </a>
-                    <a href="https://github.com/jamhanpar" target="_blank" rel="noopener noreferrer">
+                    <a href="https://angel.co/u/james-park-29" target="_blank" rel="noopener noreferrer">
                       <FaAngellist className="github-icon" size={27} />
                     </a>
                     </div>
