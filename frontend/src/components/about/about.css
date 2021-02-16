@@ -1,0 +1,49 @@
+.about-main {
+  width: 780px;
+
+}
+
+.about-app {
+  margin-top: 40px;
+}
+
+.about-app h1 {
+  font-weight: bold;
+  font-size: 22px
+}
+
+.about-app p {
+  line-height: 120%
+}
+
+.about-team {
+  margin-top: 40px 
+}
+
+.about-team h1 {
+  font-weight: bold;
+  font-size: 22px;
+ 
+}
+
+.member-list {
+  display:flex;
+  justify-content: space-evenly;
+  margin-top: 15px;
+  margin-right: 10px;
+}
+
+.member-links {
+  display:flex;
+  justify-content: space-between;
+}
+
+.team-member span {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.member-links {
+  margin-top: 10px;
+}
+

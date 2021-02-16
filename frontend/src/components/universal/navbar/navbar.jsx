@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./navbar.css";
 import "../../stylesheets/reset.css";
-import { FaHome, FaTag, FaStar, FaSearch, FaUserAstronaut, FaSmile, FaDice, FaCubes } from "react-icons/fa";
+import { FaHome, FaTag, FaStar, FaSearch, FaUserAstronaut, FaSmile, FaDice, FaCubes, FaGithub } from "react-icons/fa";
 import Search from "../search/search";
 // import { useHistory } from 'react-router-dom';
 import wordLogo from "../../../img/word-logo.png"
@@ -119,6 +119,10 @@ class NavBar extends React.Component {
               {/* <input className="search-bar" type="text" placeholder="Search"/> */}
             </div>
           </div>
+          
+          <Link to={"/about"} className="about-link">
+              <FaGithub className="github-icon" size={27} />
+          </Link>
           {this.getSessionLinks()}
         </div>
       </header>

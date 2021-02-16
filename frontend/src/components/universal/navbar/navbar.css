@@ -129,9 +129,10 @@
 }
 
 .search-bar-container {
+    /* border: 1px solid blue; */
     border-radius  : 15px;
     background     : #f3f3f3;
-    width          : 212px;
+    width          : 160px;
     height         : 30px;
     display        : flex;
     flex-direction : row;
@@ -158,6 +159,20 @@
 .search-bar:focus {
     outline  : none;
     font-size: 13px;
+}
+
+.github-icon {
+  color: #afafaf;
+}
+
+.github-icon:hover {
+  color: grey;
+}
+
+.about-link {
+  /* border: 1px solid red; */
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .user-auth-container {
@@ -225,3 +240,5 @@
     color     : black;
     transition: ease 0.5s;
 }
+
+
