@@ -22,6 +22,12 @@ Best of all, we have the Deals tab that scans Amazon for the best deals of the d
 - Additional techonlogies used: JavaScript, HTML, CSS 
 - Utilized Rapid API and Amazon API to pull product search results
 
+## Sample Pages
+![surprise-me]()
+![show]()
+![login-modal]()
+![collections]()
+
 ## Bonus features 
 - Random category generator results page
 - Visualization graph to display price distribution for every index page
