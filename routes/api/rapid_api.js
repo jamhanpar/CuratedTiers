@@ -23,7 +23,9 @@ router.get('/products/:category', async (req, res) => {
   // console.log(options)
   await axios.request(options)
     .then( response => res.send(response.data.products))
-    .catch( err => res.status(500).json({ noproductfound: "No products found!"}))
+    .catch( err => res.status(503).json({ pleasetryagain: "Please try again in 5 seconds"}));
+
+
 });
 
 module.exports = router;
