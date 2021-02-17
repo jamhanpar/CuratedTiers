@@ -5,19 +5,11 @@ import ShoppingLoadIcon from "../../img/Shopping-1.5s-200px.gif";
 import "../index/index.css";
 
 class SalesPage extends React.Component {
-  // constructor(props) {
-  //   super(props);
-  // }
-
   componentWillUnmount() {
     this.props.resetProducts();
   }
 
   componentDidMount() {
-    // const { searchTerm } = this.props.location;
-
-    // const searchTerm = localStorage.searchTerm;
-
     this.props.fetchProducts("Deals -clothing");
   }
 
@@ -34,22 +26,18 @@ class SalesPage extends React.Component {
       );
     } else {
       const products = this.props.products;
-      // const { searchTerm } = this.props.location;
-
-      // const numItems = products.length;
-      // const priceArr = products.map( (product) => product.price.current_price)
       const priceArr = products.map((product) => [
-        product.asin, // 0
-        product.price.current_price, // 1
-        parseInt(product.score), // 2
-        product.price.before_price, // 3
-        product.price.savings_amount, // 4
-        product.price.savings_percent, // 5
-        product.reviews.total_reviews, // 6
-        product.reviews.rating, // 7
-        product.thumbnail, // 8
-        product.title, // 9
-        product.url, // 10
+        product.asin,
+        product.price.current_price, 
+        parseInt(product.score), 
+        product.price.before_price,
+        product.price.savings_amount, 
+        product.price.savings_percent,
+        product.reviews.total_reviews, 
+        product.reviews.rating, 
+        product.thumbnail, 
+        product.title, 
+        product.url,
       ]);
 
       const priceArr_2 = []

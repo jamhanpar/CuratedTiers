@@ -3,10 +3,7 @@ import LikedContainer from "../universal/like/like_container";
 import "./show";
 
 const ShowPage = (props) => {
-  // const asin = props.pdt[0]
-  // const score = props.pdt[2]
   const beforePrice = props.pdt.pdt[3];
-  // const savingsAmount = props.pdt.pdt[4]
   const savingsPercent = props.pdt.pdt[5];
   const totalReviews = props.pdt.pdt[6];
   const url = props.pdt.pdt[10];
@@ -16,7 +13,6 @@ const ShowPage = (props) => {
   const rating = props.pdt.pdt[7];
   const thumbnail = props.pdt.pdt[8];
 
-  // const pdt = props.pdt.pdt
 
   return (
     <div className="show-card">
@@ -45,19 +41,6 @@ const ShowPage = (props) => {
             Sale Price: ${Math.round(currentPrice)}
           </h1>
         </div>
-
-        {/* <div className="show-card-price-container">
-          <button className="show-card-price">
-            Current Price: {currentPrice}
-          </button>
-          <button className="show-card-price">
-            Original Price: {beforePrice}
-          </button>
-          <button className="show-card-price">
-            Discounted: {savingsPercent}%
-          </button>
-        </div> */}
-
         <div className="show-card-url-container">
           <div className="show-liked-container">
             <LikedContainer props={props.pdt.pdtObj} heartSize={"heartSize"} />

@@ -53,5 +53,3 @@ class Like extends React.Component {
 }
 
 export default Like;
-
-// deleteLikedProduct needs to recognize products by the current user id and the product asin number

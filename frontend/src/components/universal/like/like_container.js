@@ -4,7 +4,6 @@ import Like from './like';
 import { createLikedProduct, deleteLikedProduct } from '../../../actions/like_actions';
 import { openModal } from '../../../actions/modal_actions';
 
-// productId: state.likedProducts.likedProducts[ownProps.props.asin]
 
 const msp = (state, ownProps) => {
   const productListObject = {};
@@ -22,7 +21,6 @@ const msp = (state, ownProps) => {
   }
 };
 
-//product should be a prop passed to like_container from index item or show modal
 
 const mdp = dispatch => ({
   createLikedProduct: (data) => dispatch(createLikedProduct(data)),

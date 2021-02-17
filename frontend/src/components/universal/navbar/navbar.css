@@ -28,7 +28,6 @@
 }
 
 .main-nav-container {
-    /* border: 1px solid blue; */
     width          : 34%;
     height         : 100%;
     display        : flex;
@@ -46,8 +45,7 @@
 }
 
 .main-nav-item {
-    /* border: 1px solid black; */
-    width: auto;
+    width          : auto;
     height         : 100%;
     font-style     : sans-serif;
     font-size      : 15px;
@@ -99,7 +97,6 @@
 }
 
 .logo-container {
-    /* border: 1px solid black; */
     width          : 34%;
     height         : 100%;
     display        : flex;
@@ -129,7 +126,6 @@
 }
 
 .search-bar-container {
-    /* border: 1px solid blue; */
     border-radius  : 15px;
     background     : #f3f3f3;
     width          : 160px;
@@ -170,8 +166,7 @@
 }
 
 .about-link {
-  /* border: 1px solid red; */
-  margin-left: 10px;
+  margin-left : 10px;
   margin-right: 10px;
 }
 
@@ -216,7 +211,6 @@
 }
 
 .user-btn {
-    /* border         : 1px solid black; */
     border         : none;
     background     : none;
     width          : 65px;

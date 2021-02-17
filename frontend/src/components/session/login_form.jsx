@@ -16,7 +16,6 @@ class LoginForm extends React.Component {
     this.handleDemoLogin = this.handleDemoLogin.bind(this);
   }
 
-  // Handle field updates (called in the render method)
   update(field) {
     return (e) =>
       this.setState({
@@ -24,7 +23,6 @@ class LoginForm extends React.Component {
       });
   }
 
-  // Handle form submission
   handleSubmit(e) {
     e.preventDefault();
 
@@ -60,7 +58,6 @@ class LoginForm extends React.Component {
     this.props.receiveErrors([]);
   }
 
-  // Render the session errors if there are any
   renderErrors() {
     const errorStatus =
       Object.values(this.props.errors).length > 0 ? "" : "hide-errors";
@@ -94,7 +91,6 @@ class LoginForm extends React.Component {
               placeholder="Email"
             />
           </div>
-
           <div className="password-label">
             <label htmlFor="password">Password</label>
           </div>
@@ -107,15 +103,7 @@ class LoginForm extends React.Component {
               placeholder="Password"
             />
           </div>
-
-          {/* <div className="forgot-password-container">
-            <a className="forgot-password-link" href="#">
-              Forgot your username or password?
-            </a>
-          </div> */}
-
           {this.props.errors.length ? "" : this.renderErrors()}
-
           <button className="session-submit-btn" type="submit">
             Sign In
           </button>

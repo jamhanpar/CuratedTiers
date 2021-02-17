@@ -27,17 +27,6 @@ class FeaturedPage extends React.Component {
   }
   
   randomSearchGen() {
-    // "Amazon Best Seller Top 100",
-    // "Ny times best sellers",
-    // "Outdoor survival gear"
-    // "Decor",
-    // "Home Gym",
-    // "Health",
-    // "Wellness",
-    // "Garden",
-    // "Outdoor Living",
-    // "Office Upgrades",
-    // "Top Decor Trends"
     const search_options = [
       "Quirky gifts",
       "Cool gadgets",
@@ -49,27 +38,16 @@ class FeaturedPage extends React.Component {
       "Fun home items",
       "Under $10",
       "Handmade",
-      // "Amazon Devices",
       "Smart Home",
       "Pet Supplies",
-      // "Furniture",
-      // "Robotime",
-      // "Kaws",
-      // "Lego",
-      // "Fun",
-      // "Workspace",
       "Modern Planters",
-      // "Travel",
       "Pop culture",
       "Snacks",
       "Kitchen"
-      // "Nintendo Switch",
-      // "DIY Kits for Adults",
     ];
 
     let searchRes = search_options[Math.floor(Math.random() * search_options.length)];
     return searchRes === this.randomSearch ? search_options[Math.floor(Math.random() * search_options.length)] : searchRes
-    // return search_options[Math.floor(Math.random() * search_options.length)];
   };
 
   handleSubmit(e) {
@@ -93,22 +71,19 @@ class FeaturedPage extends React.Component {
       );
     } else {
       const products = this.props.products;
-      // const { searchTerm } = this.props.location;
 
-      // const numItems = products.length;
-      // const priceArr = products.map( (product) => product.price.current_price)
       const priceArr = products.map((product) => [
-        product.asin, // 0
-        product.price.current_price, // 1
-        parseInt(product.score), // 2
-        product.price.before_price, // 3
-        product.price.savings_amount, // 4
-        product.price.savings_percent, // 5
-        product.reviews.total_reviews, // 6
-        product.reviews.rating, // 7
-        product.thumbnail, // 8
-        product.title, // 9
-        product.url, // 10
+        product.asin, 
+        product.price.current_price, 
+        parseInt(product.score), 
+        product.price.before_price, 
+        product.price.savings_amount, 
+        product.price.savings_percent, 
+        product.reviews.total_reviews, 
+        product.reviews.rating, 
+        product.thumbnail, 
+        product.title, 
+        product.url, 
       ]);
 
       const priceArr_2 = []
@@ -216,11 +191,6 @@ class FeaturedPage extends React.Component {
           </div>
 
           <div className="index-page">
-            {/* <div className="tier-title-list">
-              <h1 className="tier-title">Value</h1>
-              <h1 className="tier-title">Mid Tier</h1>
-              <h1 className="tier-title">High End</h1>
-            </div> */}
 
             <div className="tier-list">
               <ul>{lowTierList}</ul>

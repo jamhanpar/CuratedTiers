@@ -1,5 +1,5 @@
 import React from "react";
-import { AuthRoute, ProtectedRoute } from "../util/route_util";
+import { ProtectedRoute } from "../util/route_util";
 import { Switch, Route } from "react-router-dom";
 import NavBarContainer from "./universal/navbar/navbar_container";
 import HomePage from "./home/home_page";

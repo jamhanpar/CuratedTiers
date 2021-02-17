@@ -6,25 +6,13 @@ import jwt_decode from "jwt-decode";
 
 import { setAuthToken } from "./util/session_api_util";
 import { logout } from "./actions/session_actions";
-import {fetchProducts} from "./actions/product_actions";
-import {fetchLikedProducts} from "./actions/like_actions";
-
-//testing
-import {productRequest} from "./util/rapid_api_util";
-import {addLikedProduct} from "./util/like_util";
 
 document.addEventListener("DOMContentLoaded", () => {
   let store;
 
-  // If a returning user has a session token stored in localStorage
   if (localStorage.jwtToken) {
-    // Set the token as a common header for all axios requests
     setAuthToken(localStorage.jwtToken);
-
-    // Decode the token to obtain the user's information
     const decodedUser = jwt_decode(localStorage.jwtToken);
-
-    // Create a preconfigured state we can immediately add to our store
     const preloadedState = {
       session: { isAuthenticated: true, user: decodedUser },
     };
@@ -41,14 +29,6 @@ document.addEventListener("DOMContentLoaded", () => {
     store = configureStore({});
   }
   const root = document.getElementById("root");
-  window.dispatch = store.dispatch;
-  window.fetchProducts = fetchProducts;
-  window.fetchLikedProducts = fetchLikedProducts
-
-
-  //testing
-  window.productRequest = productRequest;
-  window.addLikedProduct = addLikedProduct;
 
   ReactDOM.render(<Root store={store} />, root);
 });

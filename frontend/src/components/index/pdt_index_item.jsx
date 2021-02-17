@@ -33,18 +33,8 @@ const PdtIndexItem = (props) => {
         }
     })
 
-  
-  // const asin = props.pdt[0]
-  // const score = props.pdt[2]
-  // const beforePrice = props.pdt[3]
-  // const savingsAmount = props.pdt[4]
-  // const savingsPercent = props.pdt[5]
-  // const totalReviews = props.pdt[6]
-  // const url = props.pdt[10]
-  
   let title = props.pdt[9]
   let currentPrice = props.pdt[1]
-  // let rating = props.pdt[7]
   let thumbnail = props.pdt[8]
 
   const { pdt, likedProduct } = props;

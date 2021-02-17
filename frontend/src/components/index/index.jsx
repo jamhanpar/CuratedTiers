@@ -20,11 +20,6 @@ class IndexPage extends React.Component {
   }
 
   componentDidMount() {
-
-    // const { searchTerm } = this.props.location;
-
-    // const searchTerm = localStorage.searchTerm;
- 
     this.props.fetchProducts(this.state.searchTerm);
   }
 
@@ -39,20 +34,19 @@ class IndexPage extends React.Component {
     } else {
    
       const products = this.props.products;
-      // const { searchTerm } = this.props.location;
   
       const priceArr = products.map((product) => [
-        product.asin, // 0
-        product.price.current_price, // 1
-        parseInt(product.score), // 2
-        product.price.before_price, // 3 
-        product.price.savings_amount, // 4
-        product.price.savings_percent, // 5
-        product.reviews.total_reviews, // 6
-        product.reviews.rating, // 7
-        product.thumbnail, // 8
-        product.title, // 9 
-        product.url, // 10 
+        product.asin, 
+        product.price.current_price, 
+        parseInt(product.score), 
+        product.price.before_price,  
+        product.price.savings_amount, 
+        product.price.savings_percent, 
+        product.reviews.total_reviews, 
+        product.reviews.rating, 
+        product.thumbnail, 
+        product.title,  
+        product.url,  
       ]);
    
 
@@ -65,10 +59,6 @@ class IndexPage extends React.Component {
           priceArr_2.push(product);
         } 
       })
-
-      // const chartData = [{name: '', uv: 400}, {name: '', uv: 300}];
-
-      
 
       priceArr_2.forEach( (product) => {
         
@@ -144,18 +134,12 @@ class IndexPage extends React.Component {
             )
       })
 
-      // chart data info start
       const chartData = [];
       priceArr_2.forEach( (product) => {
 
         let chartDataItem = {name: product[9], price: product[1] }
         chartData.push(chartDataItem) 
       });
-      // chart data info end
-
-
-      
-      // const loweest
 
       return (
         <section className="content-container">

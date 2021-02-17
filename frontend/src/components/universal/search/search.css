@@ -1,5 +1,4 @@
 .home-search-container {
-    /* border: 1px solid black; */
     width          : 1000px;
     height         : 1000px;
     display        : flex;
@@ -22,7 +21,7 @@
     height       : auto;
     font-size    : 125px;
     line-height  : 175px;
-    padding: 0 50px;
+    padding      : 0 50px;
 }
 
 .home-search-bar::placeholder {

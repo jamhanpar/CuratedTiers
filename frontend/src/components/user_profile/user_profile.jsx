@@ -18,7 +18,6 @@ class UserProfile extends React.Component {
       return (
         <div className="empty-collection">
           <h1>Your collection is empty!</h1>
-          {/* <img src={ShoppingLoadIcon} alt="Loading..." className="shopping-gif"/> */}
         </div>
       )
     } else {
