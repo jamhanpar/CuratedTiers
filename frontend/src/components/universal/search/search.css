@@ -1,10 +1,10 @@
 .home-search-container {
     width          : 1000px;
-    height         : 1000px;
+    height         : 100%;
     display        : flex;
     justify-content: center;
     align-items    : top;
-    margin-top: 250px;
+    object-fit: contain;
 }
 
 .search-input-form {
@@ -22,8 +22,16 @@
     font-size    : 125px;
     line-height  : 175px;
     padding      : 0 50px;
+    margin-top: 500px;
 }
 
 .home-search-bar::placeholder {
     color: #afafaf;
+}
+
+.home-search-description {
+    color          : #afafaf;
+    font-size      : 21px;
+    line-height:  22px;
+    margin-top: 105px;
 }
