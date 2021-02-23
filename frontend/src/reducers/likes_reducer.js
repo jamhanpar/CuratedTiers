@@ -5,15 +5,19 @@ import {
 } from '../actions/like_actions';
 
 const LikedProductsReducer = (state = {}, action) => {
+  debugger
+  let newState = Object.assign({}, state);
   Object.freeze(state);
   switch (action.type) {
     case RECEIVE_LIKED_PRODUCTS:
       return Object.assign({}, state, { list: action.likedProducts })
     case RECEIVE_LIKED_PRODUCT:
-      return Object.assign({}, state, { [action.likedProduct.asin]: action.likedProduct})
+      newState.list.push(action.likedProduct);
+      // return Object.assign({}, newState, { [action.likedProduct.asin]: action.likedProduct})
+      return newState;
     case REMOVE_LIKED_PRODUCT:
-      const newState = Object.assign({}, state);
-      delete newState[action.deletedProduct.asin];
+      newState.list = newState.list.filter(likedProduct => likedProduct.asin !== action.deletedProduct.asin);
+      
       return newState;
     default:
       return state;

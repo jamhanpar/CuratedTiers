@@ -12,7 +12,7 @@ const ShowPage = (props) => {
   const currentPrice = props.pdt.pdt[1];
   const rating = props.pdt.pdt[7];
   const thumbnail = props.pdt.pdt[8];
-
+  const heart = document.getElementById(props.likeId)
 
   return (
     <div className="show-card">

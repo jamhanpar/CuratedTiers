@@ -19,7 +19,7 @@ function Modal({modal, closeModal}) {
   let height;
   switch (modal[0]) {
     case "index_item":
-      component = <ShowPage pdt={modal[1]}/>;
+      component = <ShowPage pdt={modal[1]} likeId={modal[2]}/>;
       width = `1197px`;
       height = `640px`;
       break;
@@ -49,7 +49,7 @@ function Modal({modal, closeModal}) {
   );
 }
 
-const mapStateToProps = (state, ownProps) => {
+const mapStateToProps = (state) => {
   return {
     modal: state.ui.modal,
   };

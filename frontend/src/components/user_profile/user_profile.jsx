@@ -49,7 +49,14 @@ class UserProfile extends React.Component {
               ]
 
               return (
-                <PdtIndexItem key={`${i}`} likedProduct={likedProduct} pdt={pdt} openModal={this.props.openModal}  />
+                <PdtIndexItem
+                  key={`${i}`}
+                  likedProduct={likedProduct}
+                  pdt={pdt}
+                  openModal={this.props.openModal}
+                  fetchLikedProducts={this.props.fetchLikedProducts}
+                  userId={this.props.currentUser.id}  
+                />
               )
             })}
           </div>
