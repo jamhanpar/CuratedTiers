@@ -1,21 +1,17 @@
 import React from "react";
 import LikedContainer from '../universal/like/like_container';
+import Like from '../universal/like/like';
 import '../stylesheets/content.css';
 
 class PdtIndexItem extends React.Component {
   constructor(props) {
     super(props);
     this.state = {reload: false};
-    this.refreshComponent = this.refreshComponent.bind(this)
   }
 
-  refreshComponent() {
-    this.setState({reload: true},
-      () => this.setState({reload: false}));
-  }
 
   render() {
-    const {pdt, likedProduct} = this.props;
+    const {pdt, likedProduct, userId} = this.props;
     let pdtObj = {};
 
     pdt.map ( (ele, i) => {
@@ -54,10 +50,14 @@ class PdtIndexItem extends React.Component {
       const rating = likedProduct.rating;
       const thumbnail = likedProduct.thumbnail;
     }
+
+    const likeId = `${userId}-${pdtObj.asin}`
+
+
     return (
       <div 
       className={`product-card ${this.props.tier}`} 
-      onClick={ () => this.props.openModal({modal: 'index_item', pdt: {pdt, pdtObj} })}
+      onClick={ () => this.props.openModal({modal: 'index_item', pdt: {pdt, pdtObj}, likeId: likeId})}
       >
           <div className="product-card-price-container">
               <button className={`product-card-price btn-${this.props.tier}`}>${currentPrice}</button>
@@ -67,7 +67,7 @@ class PdtIndexItem extends React.Component {
           </div>
           <div className="product-card-info-container">
               <h1 className="product-card-info">{title}</h1>
-              <LikedContainer props={pdtObj} refresh={this.refreshComponent} />
+              <LikedContainer likeId={likeId}  props={pdtObj}/>
           </div>
     </div>
     )

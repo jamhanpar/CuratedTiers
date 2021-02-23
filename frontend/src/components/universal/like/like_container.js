@@ -13,20 +13,20 @@ const msp = (state, ownProps) => {
     })
   }
   const userId = state.session.user ? state.session.user.id : undefined
-
+  debugger
   return {
     product: ownProps.props,
     userId: userId,
     productList: productListObject,
-    refresh: ownProps.refresh
+    likeId: ownProps.likeId
   }
 };
 
 
-const mdp = dispatch => ({
+const mdp = (dispatch) => ({
   createLikedProduct: (data) => dispatch(createLikedProduct(data)),
   deleteLikedProduct: (identifier) => dispatch(deleteLikedProduct(identifier)),
-  openModal: (modal) => dispatch(openModal(modal))
+  openModal: (modal) => dispatch(openModal(modal)),
 });
 
 export default withRouter(connect(msp, mdp)(Like));

@@ -12,7 +12,7 @@ const ShowPage = (props) => {
   const currentPrice = props.pdt.pdt[1];
   const rating = props.pdt.pdt[7];
   const thumbnail = props.pdt.pdt[8];
-
+  const heart = document.getElementById(props.likeId)
 
   return (
     <div className="show-card">
@@ -43,7 +43,8 @@ const ShowPage = (props) => {
         </div>
         <div className="show-card-url-container">
           <div className="show-liked-container">
-            <LikedContainer props={props.pdt.pdtObj} heartSize={"heartSize"} />
+            {heart.outerHTML}
+            {/* <LikedContainer props={props.pdt.pdtObj} heartSize={"heartSize"} /> */}
           </div>
           <a
             className="show-card-url-btn"

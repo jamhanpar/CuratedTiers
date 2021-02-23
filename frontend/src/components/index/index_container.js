@@ -6,6 +6,7 @@ import IndexPage from "./index";
 
 const mapStateToProps = (state) => ({
   products: state.products,
+  userId: state.session.isAuthenticated ? state.session.user.id : ""
 });
 
 const mapDispatchToProps = (dispatch) => ({

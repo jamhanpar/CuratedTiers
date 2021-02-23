@@ -24,6 +24,7 @@ class IndexPage extends React.Component {
   }
 
   render() {
+    const userId = this.props.userId;
     
     if (this.props.products.length === undefined) {
       return (
@@ -120,17 +121,17 @@ class IndexPage extends React.Component {
 
       const lowTierList = lowTier.map( (pdt, i) => {
             return (
-               <PdtIndexItem key={`${i}`} pdt={pdt} tier='low-tier' openModal={this.props.openModal}/>
+               <PdtIndexItem key={`${i}`} pdt={pdt} tier='low-tier' openModal={this.props.openModal} userId={userId}/>
             )
       })
       const midTierList = midTier.map( (pdt, i) => {
             return (
-               <PdtIndexItem key={`${i}`} pdt={pdt} tier='mid-tier' openModal={this.props.openModal}/>
+               <PdtIndexItem key={`${i}`} pdt={pdt} tier='mid-tier' openModal={this.props.openModal} userId={userId}/>
             )
       })
       const highTierList = highTier.map( (pdt, i) => {
             return (
-               <PdtIndexItem key={`${i}`} pdt={pdt} tier='high-tier' openModal={this.props.openModal}/>
+               <PdtIndexItem key={`${i}`} pdt={pdt} tier='high-tier' openModal={this.props.openModal} userId={userId}/>
             )
       })
 

@@ -1,5 +1,6 @@
 import React from "react";
 import { FaHeart } from "react-icons/fa";
+import PdtIndexItem from "../../index/pdt_index_item";
 import "./like.css";
 
 class Like extends React.Component {
@@ -16,7 +17,8 @@ class Like extends React.Component {
     e.preventDefault();
     const product = this.props.product;
     if (this.state.liked === false && this.props.userId) {
-      this.props.refresh;
+      debugger;
+      this.props.refresh();
       this.props.createLikedProduct({
         user: this.props.userId,
         asin: product.asin,
@@ -32,7 +34,7 @@ class Like extends React.Component {
         url: product.url
       }).then(() => this.setState({liked: true}))
     } else if (this.state.liked === true && this.props.userId) {
-      this.props.refresh;
+      
       this.props.deleteLikedProduct(this.props.productList[this.props.product.asin]).then(
         () => this.setState({liked: false})
       )
@@ -43,9 +45,9 @@ class Like extends React.Component {
 
   render() {
     const likedStatus = this.state.liked ? "liked" : "unliked";
-    
+    const likeId = this.props.likeId;
     return (
-      <div className="heart-container">
+      <div id={likeId} className="heart-container">
         <button className="heart-btn-container" onClick={this.handleClick}>
           <FaHeart className={`${likedStatus} ${this.props.heartSize}`} />
         </button>
