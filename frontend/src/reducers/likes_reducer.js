@@ -5,6 +5,7 @@ import {
 } from '../actions/like_actions';
 
 const LikedProductsReducer = (state = {}, action) => {
+  debugger
   Object.freeze(state);
   switch (action.type) {
     case RECEIVE_LIKED_PRODUCTS:

@@ -21,6 +21,9 @@ class IndexPage extends React.Component {
 
   componentDidMount() {
     this.props.fetchProducts(this.state.searchTerm);
+    if (this.props.userId !== "") {
+      this.props.fetchLikedProducts(this.props.userId)
+    }
   }
 
   render() {

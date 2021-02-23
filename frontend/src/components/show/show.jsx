@@ -43,8 +43,7 @@ const ShowPage = (props) => {
         </div>
         <div className="show-card-url-container">
           <div className="show-liked-container">
-            {heart.outerHTML}
-            {/* <LikedContainer props={props.pdt.pdtObj} heartSize={"heartSize"} /> */}
+            <LikedContainer props={props.pdt.pdtObj} heartSize={"heartSize"} />
           </div>
           <a
             className="show-card-url-btn"

@@ -1,13 +1,12 @@
 import React from "react";
 import { FaHeart } from "react-icons/fa";
-import PdtIndexItem from "../../index/pdt_index_item";
 import "./like.css";
 
 class Like extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      liked: (this.props.productList[this.props.product.asin] ? true : false)
+      liked: (this.props.isAuthenticated ? (this.props.productList[this.props.product.asin] ? true : false) : false)
     };
 
     this.handleClick = this.handleClick.bind(this);
@@ -17,8 +16,7 @@ class Like extends React.Component {
     e.preventDefault();
     const product = this.props.product;
     if (this.state.liked === false && this.props.userId) {
-      debugger;
-      this.props.refresh();
+      
       this.props.createLikedProduct({
         user: this.props.userId,
         asin: product.asin,
@@ -44,6 +42,7 @@ class Like extends React.Component {
   }
 
   render() {
+    debugger
     const likedStatus = this.state.liked ? "liked" : "unliked";
     const likeId = this.props.likeId;
     return (

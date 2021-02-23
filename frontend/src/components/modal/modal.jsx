@@ -35,15 +35,9 @@ function Modal({modal, closeModal}) {
       return null;
   }
 
-  function closeModalFunction() {
-    closeModal();
-    debugger
-    
-  }
-
 
   return (
-    <div className="modal-container" onClick={() => closeModalFunction()}>
+    <div className="modal-container" onClick={closeModal}>
       <div
         className="modal-component"
         style={{ width: `${width}`, height: `${height}` }}
@@ -55,7 +49,7 @@ function Modal({modal, closeModal}) {
   );
 }
 
-const mapStateToProps = (state, ownProps) => {
+const mapStateToProps = (state) => {
   return {
     modal: state.ui.modal,
   };
