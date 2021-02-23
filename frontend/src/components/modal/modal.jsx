@@ -35,9 +35,15 @@ function Modal({modal, closeModal}) {
       return null;
   }
 
+  function closeModalFunction() {
+    closeModal();
+    debugger
+    
+  }
+
 
   return (
-    <div className="modal-container" onClick={closeModal}>
+    <div className="modal-container" onClick={() => closeModalFunction()}>
       <div
         className="modal-component"
         style={{ width: `${width}`, height: `${height}` }}

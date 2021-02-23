@@ -16,6 +16,7 @@ class Like extends React.Component {
     e.preventDefault();
     const product = this.props.product;
     if (this.state.liked === false && this.props.userId) {
+      this.props.refresh;
       this.props.createLikedProduct({
         user: this.props.userId,
         asin: product.asin,
@@ -31,6 +32,7 @@ class Like extends React.Component {
         url: product.url
       }).then(() => this.setState({liked: true}))
     } else if (this.state.liked === true && this.props.userId) {
+      this.props.refresh;
       this.props.deleteLikedProduct(this.props.productList[this.props.product.asin]).then(
         () => this.setState({liked: false})
       )

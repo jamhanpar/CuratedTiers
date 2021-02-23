@@ -17,7 +17,8 @@ const msp = (state, ownProps) => {
   return {
     product: ownProps.props,
     userId: userId,
-    productList: productListObject
+    productList: productListObject,
+    refresh: ownProps.refresh
   }
 };
 
