@@ -12,6 +12,12 @@ class Like extends React.Component {
     this.handleClick = this.handleClick.bind(this);
   }
 
+  componentDidUpdate(prevProps) {
+    if (this.props.productList !== prevProps.productList) {
+      this.setState({liked: this.props.productList[this.props.product.asin] ? true : false})
+    }
+  }
+
   handleClick(e) {
     e.preventDefault();
     const product = this.props.product;
@@ -42,7 +48,7 @@ class Like extends React.Component {
   }
 
   render() {
-    debugger
+    
     const likedStatus = this.state.liked ? "liked" : "unliked";
     const likeId = this.props.likeId;
     return (

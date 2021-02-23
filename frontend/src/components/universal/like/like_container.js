@@ -6,7 +6,7 @@ import { openModal } from '../../../actions/modal_actions';
 
 
 const msp = (state, ownProps) => {
-  debugger
+  
   const productListObject = {};
   if (Object.keys(state.likedProducts).length > 0 && ("list" in state.likedProducts)) {
     state.likedProducts.list.map( product => {

@@ -6,7 +6,13 @@ import '../stylesheets/content.css';
 class PdtIndexItem extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {reload: false};
+    
+  }
+
+  componentWillUnmount() {
+    if (this.props.fetchLikedProducts) {
+      this.props.fetchLikedProducts(this.props.userId)
+    }
   }
 
 
