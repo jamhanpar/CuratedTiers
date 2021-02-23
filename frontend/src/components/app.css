@@ -11,6 +11,8 @@ body {
     height: 100%;
 }
 
-button:focus, input:focus, textarea:focus {
+button:focus,
+input:focus,
+textarea:focus {
     outline: none;
 }
