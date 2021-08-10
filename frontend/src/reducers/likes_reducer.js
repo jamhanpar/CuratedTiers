@@ -5,7 +5,6 @@ import {
 } from '../actions/like_actions';
 
 const LikedProductsReducer = (state = {}, action) => {
-  debugger
   let newState = Object.assign({}, state);
   Object.freeze(state);
   switch (action.type) {
