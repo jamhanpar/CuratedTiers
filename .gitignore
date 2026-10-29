@@ -3,3 +3,4 @@
 /frontend/.env
 /frontend/.eslintcache
 /frontend/config/keys_development.js
+.DS_Store
